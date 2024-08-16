@@ -1,0 +1,43 @@
+.wrapper
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    border-right: 1px solid #EAEAEF
+
+    .logoBox
+        display: flex
+        align-items: center
+        margin-right: 1rem
+        width: 4rem
+        height: 4rem
+        gap: 1rem
+
+    .logoText
+        font-family: Mont, sans-serif
+        font-size: 1.6rem
+        font-weight: bold
+        color: #343C6A
+
+    .menu
+        display: flex
+        flex-direction: column
+        margin-top: 2rem
+        align-items: flex-start
+
+    .menuBox
+        display: flex
+        align-items: end
+        gap: 1rem
+        justify-content: center
+        &:hover
+            cursor: pointer
+            border-left: 4px solid #1814F3
+            border-radius: 3px
+            transition: all 0.3s
+
+    .btn
+        font-size: 18px
+        font-weight: medium
+        margin-top: 2rem
+        &:hover
+            color: #1814F3

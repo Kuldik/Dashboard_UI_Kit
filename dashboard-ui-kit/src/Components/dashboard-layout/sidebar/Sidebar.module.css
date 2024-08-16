@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  border-right: 1px solid #EAEAEF;
+}
+.wrapper .logoBox {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  gap: 1rem;
+}
+.wrapper .logoText {
+  font-family: Mont, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #343C6A;
+}
+.wrapper .menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+.wrapper .menuBox {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  justify-content: center;
+}
+.wrapper .menuBox:hover {
+  cursor: pointer;
+  border-left: 4px solid #1814F3;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+.wrapper .btn {
+  font-size: 18px;
+  font-weight: medium;
+  margin-top: 2rem;
+}
+.wrapper .btn:hover {
+  color: #1814F3;
+}/*# sourceMappingURL=Sidebar.module.css.map */
