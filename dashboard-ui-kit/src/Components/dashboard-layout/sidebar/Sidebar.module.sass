@@ -1,16 +1,15 @@
 .wrapper
     display: flex
     flex-direction: column
-    align-items: baseline
     border-right: 1px solid #EAEAEF
 
     .logoBox
         display: flex
         align-items: center
         margin-right: 1rem
-        width: 4rem
         height: 4rem
         gap: 1rem
+        margin: 0 4rem 2.5rem 3rem
 
     .logoText
         font-family: Mont, sans-serif
@@ -21,23 +20,22 @@
     .menu
         display: flex
         flex-direction: column
-        margin-top: 2rem
-        align-items: flex-start
+        padding-bottom: 2rem
 
     .menuBox
         display: flex
-        align-items: end
+        align-items: center
         gap: 1rem
-        justify-content: center
+        padding-top: 1rem
+        padding-bottom: 1rem
+        padding-left: 3rem
+        transition: all 0.3s ease-in-out
         &:hover
             cursor: pointer
             border-left: 4px solid #1814F3
-            border-radius: 3px
-            transition: all 0.3s
-
+            border-radius: 5px 0 0 5px
     .btn
         font-size: 18px
-        font-weight: medium
-        margin-top: 2rem
+        color: #B1B1B1
         &:hover
             color: #1814F3
