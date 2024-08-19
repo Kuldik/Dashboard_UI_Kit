@@ -1,6 +1,5 @@
 import styles from "./Header.module.css";
-export function Header() {
-    const title = "Overview";
+export function Header( {title} ) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.headerText}>

@@ -1,10 +1,10 @@
-import { DashboardLayout } from '../Components/dashboard-layout/DashboardLayout';
 import './App.css';
+import Routes from '../routes.js';
 
 function App() {
   return (
     <div className="App">
-      <DashboardLayout/>
+      <Routes />
     </div>
   );
 }

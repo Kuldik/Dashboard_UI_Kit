@@ -1,4 +1,5 @@
 import styles from "./Sidebar.module.css";
+import { Link } from "react-router-dom";
 export function Sidebar() {
     return (
         <div className={styles.wrapper}>
@@ -9,41 +10,41 @@ export function Sidebar() {
             <div className={styles.menu}>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/dashboard.svg" alt="" />
-                    <button className={styles.btn}>Dashboard</button>
+                    <Link to="/" className={styles.btn}>Dashboard</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/transactions.svg" alt="" />
-                    <button className={styles.btn}>Transactions</button>
+                    <Link to="/transactions" className={styles.btn}>Transactions</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/accounts.svg" alt="" />
-                    <button className={styles.btn}>Accounts</button>
+                    <Link to="/accounts" className={styles.btn}>Accounts</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/investments.svg" alt="" />
-                    <button className={styles.btn}>Investments</button>
+                    <Link to="/investments" className={styles.btn}>Investments</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/creditCards.svg" alt="" />
-                    <button className={styles.btn}>Credit Cards</button>
+                    <Link to="/credit-cards" className={styles.btn}>Credit Cards</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/loans.svg" alt="" />
-                    <button className={styles.btn}>Loans</button>
+                    <Link to="/loans" className={styles.btn}>Loans</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/Services.svg" alt="" />
-                    <button className={styles.btn}>Services</button>
+                    <Link to="/services" className={styles.btn}>Services</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/MyPrivilege.svg" alt="" />
-                    <button className={styles.btn}>My Privileges</button>
+                    <Link to="/my-privileges" className={styles.btn}>My Privileges</Link>
                 </div>
                 <div className={styles.menuBox}>
                     <img src="/img/SidebarIcons/settings.svg" alt="" />
-                    <button className={styles.btn}>Settings</button>
+                    <Link to="/settings" className={styles.btn}>Settings</Link>
                 </div>
             </div>
-        </div>
+            </div>
     );
 }
