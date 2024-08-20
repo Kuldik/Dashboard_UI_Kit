@@ -2,5 +2,10 @@
   display: grid;
   min-height: 100vh;
   grid-template-columns: 0.8fr 6fr;
-  grid-gap: 1rem;
+}
+.wrapper .main {
+  margin-top: 1.9rem;
+  background-color: #F5F7FA;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }/*# sourceMappingURL=Dashboard.module.css.map */

@@ -2,6 +2,7 @@ import React from 'react'
 import { Sidebar } from '../../sidebar/Sidebar'
 import { Header } from './../../header/Header';
 import styles from './Dashboard.module.css'
+import Card from '../../../UI/Card/Card';
 
 export default function Transactions() {
   return (
@@ -12,7 +13,19 @@ export default function Transactions() {
         <div className={styles.main}>
 
           <div className={styles.cardsBlock}>
-            
+
+            <div className={styles.cards}>
+              <Card
+                title="My Cards"
+                cardLabel="See All"
+                balance="$5,756"
+                validationDate="12/22"
+                cardHolderName="Eddy Cusuma"
+                cardNumber="3778 **** **** 1234"
+              >
+              </Card>
+            </div>
+
             <div className={styles.transcations}>
 
             </div>
