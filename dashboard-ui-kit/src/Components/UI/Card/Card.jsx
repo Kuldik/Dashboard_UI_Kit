@@ -8,7 +8,10 @@ export default function Card
   balance, 
   validationDate, 
   cardHolderName,
-  cardNumber
+  cardNumber,
+  backgroundColor,
+  hideGradient,
+  ...props
 }) {
   return (
     <div className={styles.myCards}>
@@ -16,7 +19,10 @@ export default function Card
         <div className={styles.cardsTitle}>{title}</div>
         <button className={styles.cardLabel}>{cardLabel}</button>
       </div>
-      <div className={styles.cardItems}>
+      <div 
+        className={styles.cardItems}
+        style={{ backgroundColor: backgroundColor }}
+      >
         <div className={styles.balanceBox}>
           <div className={styles.balanceItems}>
             <p>Balance</p>
@@ -34,7 +40,7 @@ export default function Card
             <div className={styles.validationDate}>{validationDate}</div>
           </div>
         </div>
-        <div className={styles.cardFooter}>
+        <div className={`${styles.cardFooter} ${hideGradient ? styles.hideGradient : ''}`}>
           <div className={styles.cardNumber}>{cardNumber}</div>
           <img src="/img/Cards/visa.svg" alt="visa" />
         </div>

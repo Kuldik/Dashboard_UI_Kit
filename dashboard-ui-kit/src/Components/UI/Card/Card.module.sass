@@ -4,7 +4,7 @@
         display: flex
         justify-content: space-between
         margin-bottom: 1.2rem
-        padding-top: 1.5rem
+        margin-top: 1.2rem
         align-items: baseline
 
         .cardsTitle
@@ -21,7 +21,7 @@
     .cardItems
         display: flex
         flex-direction: column
-        max-width: 330px
+        width: 330px
         background-color: #0A06F4
         padding: 1.3rem
         border-radius: 1rem
@@ -34,7 +34,7 @@
             .balanceItems
                 p
                     font-size: 0.75rem
-                    color: #FFFFFF
+                    color: #d99203
                 .balance
                     font-family: Mont, sans-serif
                     font-size: 1.25rem
@@ -72,6 +72,9 @@
         justify-content: space-between
         align-items: center
         position: relative
+
+        &.hideGradient::before
+            display: none
 
         &::before
             content: ""
