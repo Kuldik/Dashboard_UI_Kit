@@ -4,6 +4,8 @@ import { Header } from './../../header/Header';
 import styles from './Dashboard.module.css'
 import Card from '../../../UI/Card/Card';
 import TransactionItem from '../../../UI/TransactionItem/TransactionItem';
+import Charts from './../../../Charts/Chart';
+import Diagram from '../../../Charts/Diagram';
 
 export default function Transactions() {
   return (
@@ -26,20 +28,20 @@ export default function Transactions() {
               </Card>
               <Card
                 cardLabel="+ Add"
-                balance="$5,756"
+                balance="$4,313"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
-                cardNumber="3778 **** **** 1234"
+                cardNumber="3778 **** **** 5234"
                 backgroundColor="#B1B1B1"
                 hideGradient={true}
               >
               </Card>
               <Card
                 cardLabel="See All"
-                balance="$5,756"
+                balance="-$15,756"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
-                cardNumber="3778 **** **** 1234"
+                cardNumber="3778 **** **** 1453"
                 backgroundColor="#FFC500"
                 hideGradient={true}
               >
@@ -82,10 +84,20 @@ export default function Transactions() {
 
           <div className={styles.activity}>
             <div className={styles.weeklyActivity}>
-
+              <div className={styles.activityTitle}>
+                <b>Weekly Activity</b>
+                <div className={styles.charts}>
+                  <Charts></Charts>
+                </div>
+              </div>
             </div>
             <div className={styles.statistics}>
-
+              <div className={styles.statisticsTitle}>
+                <b>Expense Statistics</b>
+                <div className={styles.diagram}>
+                  <Diagram/>
+                </div>
+              </div>
             </div>
           </div>
 
