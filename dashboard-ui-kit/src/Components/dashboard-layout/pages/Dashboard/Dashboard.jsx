@@ -1,11 +1,12 @@
 import React from 'react'
 import { Sidebar } from '../../sidebar/Sidebar'
-import { Header } from './../../header/Header';
+import { Header } from '../../header/Header.jsx';
 import styles from './Dashboard.module.css'
 import Card from '../../../UI/Card/Card';
 import TransactionItem from '../../../UI/TransactionItem/TransactionItem';
 import Charts from './../../../Charts/Chart';
 import Diagram from '../../../Charts/Diagram';
+import TransferItem from '../../../UI/TransferItem/TransferItem.jsx';
 
 export default function Transactions() {
   return (
@@ -102,11 +103,47 @@ export default function Transactions() {
           </div>
 
           <div className={styles.footer}>
-            <div className={styles.transfer}>
-
+            <div className={styles.transferTitle}>
+              <b>Quick Transfer</b>
             </div>
-            <div className={styles.balance}>
-
+            <div className={styles.transferContainer}>
+              <div className={styles.transferList}>
+                <div className={styles.workersList}>
+                  <TransferItem
+                    name="Livia Bator"
+                    position="CEO"
+                    icon="/img/Transfer/firstItem.png"
+                  />
+                  <TransferItem
+                    name="Randy Press"
+                    position="Director"
+                    icon="/img/Transfer/secondItem.png"
+                  />
+                  <TransferItem
+                    name="Workman"
+                    position="Designer"
+                    icon="/img/Transfer/thirdItem.png"
+                  />
+                  <div className={styles.arrowNext}>
+                    <button>
+                      <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.sendForm}>
+                  <b>Write Amount</b>
+                  <div className={styles.inputItem}>
+                    <input type='number' placeholder="0.00" />
+                    <button>
+                      <b>Send</b>
+                      <img src="/img/Transactions/telegram.svg" alt="tg" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.balance}>
+                <b>Balance</b>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Header } from "./header/Header";
+import { Header } from "./header/Header.jsx";
 import { Sidebar } from "./sidebar/Sidebar";
 import styles from "./DashboardLayout.module.css";
 

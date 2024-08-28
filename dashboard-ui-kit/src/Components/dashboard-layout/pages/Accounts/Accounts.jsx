@@ -1,6 +1,6 @@
 import React from 'react'
-import { Sidebar } from '../../sidebar/Sidebar'
-import { Header } from './../../header/Header';
+import { Sidebar } from '../../sidebar/Sidebar.jsx'
+import { Header } from '../../header/Header.jsx';
 import styles from './Accounts.module.css'
 
 export default function Transactions() {

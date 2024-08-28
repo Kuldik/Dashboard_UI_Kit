@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .wrapper .cards {
   display: flex;
@@ -43,6 +43,7 @@
 .wrapper .activity {
   display: grid;
   grid-template-columns: 2.2fr 1fr;
+  margin-bottom: 1rem;
 }
 .wrapper .activity .weeklyActivity .activityTitle {
   display: flex;
@@ -81,4 +82,104 @@
   padding: 1.75rem !important;
   border-radius: 1rem !important;
   background-color: #ffffff !important;
+}
+.wrapper .footer {
+  padding-bottom: 1.5rem;
+}
+.wrapper .footer .transferContainer {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  grid-gap: 3rem;
+}
+.wrapper .footer .transferTitle {
+  font-family: Mont, sans-serif;
+  font-size: 1.375rem;
+  color: #343C6A;
+  font-weight: bold;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+.wrapper .footer .workersList {
+  display: flex;
+  gap: 2.125rem;
+  align-items: center;
+}
+.wrapper .footer .workersList .arrowNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.wrapper .footer .workersList .arrowNext:hover {
+  scale: 1.3;
+}
+.wrapper .footer .workersList .arrowNext img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+.wrapper .footer .workersList .arrowNext button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.wrapper .footer .transferList {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.wrapper .footer .transferList .sendForm {
+  display: flex;
+  padding-top: 2rem;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.wrapper .footer .transferList .sendForm b {
+  font-size: 1rem;
+  color: #718EBF;
+  font-weight: normal;
+}
+.wrapper .footer .transferList .sendForm .inputItem {
+  position: relative;
+}
+.wrapper .footer .transferList .sendForm .inputItem input {
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border-radius: 2rem;
+  background-color: #EDF1F7;
+  color: #718EBF;
+}
+.wrapper .footer .transferList .sendForm .inputItem button {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: #1814F3;
+  border-radius: 2rem;
+  padding: 0.8rem 2.6rem 0.8rem 2.6rem;
+  transition: transform 0.5s ease-in-out;
+}
+.wrapper .footer .transferList .sendForm .inputItem button:hover img {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(360deg) scale(1.1);
+}
+.wrapper .footer .transferList .sendForm .inputItem button b {
+  font-size: 1rem;
+  color: #ffffff;
 }/*# sourceMappingURL=Dashboard.module.css.map */
