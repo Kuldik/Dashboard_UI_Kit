@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState, useMemo, useEffect } from 'react'
 import { Sidebar } from '../../sidebar/Sidebar'
 import { Header } from '../../header/Header.jsx';
 import styles from './Dashboard.module.css'
@@ -8,7 +8,34 @@ import Charts from './../../../Charts/Chart';
 import Diagram from '../../../Charts/Diagram';
 import TransferItem from '../../../UI/TransferItem/TransferItem.jsx';
 
+const itemsPerPage = 3;
+
 export default function Transactions() {
+
+  const workersList = useMemo(() => [
+    { name: "Livia Bator", position: "CEO", icon: "/img/Transfer/firstItem.png" },
+    { name: "Randy Press", position: "Director", icon: "/img/Transfer/secondItem.png" },
+    { name: "Workman", position: "Designer", icon: "/img/Transfer/thirdItem.png" },
+    { name: "Livia Bator", position: "CEO", icon: "/img/Transfer/firstItem.png" },
+    { name: "Randy Press", position: "Director", icon: "/img/Transfer/secondItem.png" },
+    { name: "Workman", position: "Designer", icon: "/img/Transfer/thirdItem.png" },
+  ], []);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const visibleWorkers = workersList.slice(currentIndex, currentIndex + 3);
+
+  if (visibleWorkers.length < 3) {
+    const remainingWorkers = 3 - visibleWorkers.length;
+    const additionalWorkers = workersList.slice(0, remainingWorkers);
+    visibleWorkers.push(...additionalWorkers);
+  }
+
+  const handleNextClick = () => {
+    const nextIndex = (currentIndex + 1) % workersList.length;
+    setCurrentIndex(nextIndex);
+  };
+
   return (
     <div className={styles.wrapper}>
       <Sidebar></Sidebar>
@@ -108,28 +135,19 @@ export default function Transactions() {
             </div>
             <div className={styles.transferContainer}>
               <div className={styles.transferList}>
-                <div className={styles.workersList}>
-                  <TransferItem
-                    name="Livia Bator"
-                    position="CEO"
-                    icon="/img/Transfer/firstItem.png"
-                  />
-                  <TransferItem
-                    name="Randy Press"
-                    position="Director"
-                    icon="/img/Transfer/secondItem.png"
-                  />
-                  <TransferItem
-                    name="Workman"
-                    position="Designer"
-                    icon="/img/Transfer/thirdItem.png"
-                  />
-                  <div className={styles.arrowNext}>
-                    <button>
-                      <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
-                    </button>
-                  </div>
-                </div>
+              <div className={styles.workersList}>
+                {visibleWorkers.map((worker, index) => (
+                <TransferItem
+                  key={index}
+                  name={worker.name}
+                  position={worker.position}
+                  icon={worker.icon}
+                />
+               ))}
+                <button className={styles.transeferArrow} onClick={handleNextClick}>
+                  <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
+                </button>
+              </div>
                 <div className={styles.sendForm}>
                   <b>Write Amount</b>
                   <div className={styles.inputItem}>

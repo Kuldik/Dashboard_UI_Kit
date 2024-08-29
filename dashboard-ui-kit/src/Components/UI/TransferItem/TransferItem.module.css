@@ -11,6 +11,7 @@
 .wrapper .name b {
   font-size: 1rem;
   font-weight: normal;
+  text-wrap: nowrap;
 }
 .wrapper .position {
   color: #718EBF;
