@@ -1,4 +1,4 @@
-import React , { useState, useMemo, useEffect } from 'react'
+import React , { useState, useMemo } from 'react'
 import { Sidebar } from '../../sidebar/Sidebar'
 import { Header } from '../../header/Header.jsx';
 import styles from './Dashboard.module.css'
@@ -7,8 +7,8 @@ import TransactionItem from '../../../UI/TransactionItem/TransactionItem';
 import Charts from './../../../Charts/Chart';
 import Diagram from '../../../Charts/Diagram';
 import TransferItem from '../../../UI/TransferItem/TransferItem.jsx';
+import Linear from '../../../Charts/Linear.jsx';
 
-const itemsPerPage = 3;
 
 export default function Transactions() {
 
@@ -130,37 +130,44 @@ export default function Transactions() {
           </div>
 
           <div className={styles.footer}>
-            <div className={styles.transferTitle}>
-              <b>Quick Transfer</b>
-            </div>
-            <div className={styles.transferContainer}>
-              <div className={styles.transferList}>
-              <div className={styles.workersList}>
-                {visibleWorkers.map((worker, index) => (
-                <TransferItem
-                  key={index}
-                  name={worker.name}
-                  position={worker.position}
-                  icon={worker.icon}
-                />
-               ))}
-                <button className={styles.transeferArrow} onClick={handleNextClick}>
-                  <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
-                </button>
+            <div className={styles.quickTransfer}>
+              <div className={styles.transferTitle}>
+                <b>Quick Transfer</b>
               </div>
-                <div className={styles.sendForm}>
-                  <b>Write Amount</b>
-                  <div className={styles.inputItem}>
-                    <input type='number' placeholder="0.00" />
-                    <button>
-                      <b>Send</b>
-                      <img src="/img/Transactions/telegram.svg" alt="tg" />
-                    </button>
+              <div className={styles.transferContainer}>
+                <div className={styles.transferList}>
+                  <div className={styles.workersList}>
+                    {visibleWorkers.map((worker, index) => (
+                    <TransferItem
+                      key={index}
+                      name={worker.name}
+                      position={worker.position}
+                      icon={worker.icon}
+                    />
+                  ))}
+                  <button className={styles.transeferArrow} onClick={handleNextClick}>
+                    <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
+                  </button>
+                </div>
+                  <div className={styles.sendForm}>
+                    <b>Write Amount</b>
+                    <div className={styles.inputItem}>
+                      <input type='number' placeholder="0.00" />
+                      <button>
+                        <b>Send</b>
+                        <img src="/img/Transactions/telegram.svg" alt="tg" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className={styles.balance}>
-                <b>Balance</b>
+            </div>
+            <div className={styles.balanceHistory}>
+              <div className={styles.balanceTitle}>
+               <b>Balance History</b>
+              </div>
+              <div className={styles.balanceContainer}>
+                <Linear/>
               </div>
             </div>
           </div>
