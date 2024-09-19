@@ -8,25 +8,16 @@ const Charts = () => {
   // Define chart data
 
   const chart2Data = {
-    labels: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+    labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
     datasets: [
       {
-        data: [499, 350, 310, 480, 150, 380, 400],
-        label: "Withdraw",
-        borderColor: "#1814F3",
-        backgroundColor: "rgba(24, 20, 243, 1)",
-        borderRadius: 50,
-        barPercentage: 0.4,
-        fill: true
-      },
-      {
-        data: [220, 120, 250, 360, 230, 235, 320],
+        data: [8300, 13500, 9000, 4300, 12500, 8600],
         label: "Diposit",
-        borderColor: "#16DBCC",
-        backgroundColor: "rgba(22, 219, 204, 1)",
-        borderRadius: 50,
-        barPercentage: 0.4,
-        fill: true
+        borderColor: "#1814F3",
+        backgroundColor: "rgba(237, 240, 247, 1)",
+        fill: true,
+        borderRadius: 10,
+        hoverBackgroundColor: "#16DBCC", // Add this line
       },
     ]
   };
@@ -36,16 +27,22 @@ const Charts = () => {
     scales: {
       x: {
         type: 'category',
-        display: true
+        display: true,
+        grid: { // Add this line
+          display: false,
+        },
       },
       y: {
         type: 'linear',
         display: true,
-        gridLines: {
-          display: false
-        }
+        grid: { // Add this line
+          display: false,
+        },
+        ticks: { // Add this line
+          display: false,
+        },
       }
-    }
+    },
   };
 
   // Define charts array

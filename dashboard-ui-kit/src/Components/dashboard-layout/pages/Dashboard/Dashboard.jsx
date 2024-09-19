@@ -76,7 +76,7 @@ export default function Transactions() {
               </Card>
             </div>
 
-            <div className={styles.transcations}>
+            <div className={styles.transactions}>
               <h1 className={styles.transactionsTitle}>Recent Transactions</h1>
               <div className={styles.transactionsBox}>
                 <div className={styles.transactionsItem}>

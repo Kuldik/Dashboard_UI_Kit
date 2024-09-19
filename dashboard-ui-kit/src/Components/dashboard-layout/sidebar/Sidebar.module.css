@@ -3,7 +3,8 @@
   flex-direction: column;
   border-right: 1px solid #EAEAEF;
 }
-.wrapper .logoBox {
+
+.logoBox {
   display: flex;
   align-items: center;
   margin-right: 1rem;
@@ -11,18 +12,21 @@
   gap: 1rem;
   margin: 0 4rem 2.5rem 3rem;
 }
-.wrapper .logoText {
+
+.logoText {
   font-family: Mont, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   color: #343C6A;
 }
-.wrapper .menu {
+
+.menu {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
 }
-.wrapper .menuBox {
+
+.menuBox {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -31,20 +35,28 @@
   padding-left: 3rem;
   transition: all 0.3s ease-in-out;
 }
-.wrapper .menuBox:hover {
+.menuBox:hover {
   cursor: pointer;
   border-left: 4px solid #1814F3;
   border-radius: 5px 0 0 5px;
 }
-.wrapper .menuBox:hover .btn {
+.menuBox:hover .btn {
   color: #1814F3;
 }
-.wrapper .menuBox:hover img {
+.menuBox:hover img {
   filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
   background-color: #1814F3;
   background: transparent;
 }
-.wrapper .btn {
+.menuBox .btn {
+  color: #B1B1B1;
+}
+.menuBox img {
+  background-color: #B1B1B1;
+  background: transparent;
+}
+
+.btn {
   font-size: 18px;
   color: #B1B1B1;
   text-decoration: none;

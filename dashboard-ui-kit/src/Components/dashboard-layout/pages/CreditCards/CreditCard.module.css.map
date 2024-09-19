@@ -1,1 +1,1 @@
-{"version":3,"sources":["CreditCard.module.sass","CreditCard.module.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,iBAAA;EACA,gCAAA;EACA,cAAA;ACCJ","file":"CreditCard.module.css"}
+{"version":3,"sources":["CreditCard.module.scss","CreditCard.module.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,iBAAA;EACA,gCAAA;EACA,cAAA;ACCJ","file":"CreditCard.module.css"}

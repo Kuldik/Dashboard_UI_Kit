@@ -10,7 +10,7 @@ const Linear = () => {
         label: "",
         borderColor: "#3333ff",
         fill: true,
-        lineTension: 0.5
+        lineTension: 0.5,
       },
     ]
   };

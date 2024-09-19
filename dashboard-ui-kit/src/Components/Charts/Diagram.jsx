@@ -5,10 +5,11 @@ const Diagram = () => {
   const pieDiagramData = {
     labels: ["30% Entertainment", "20% Investment", "35% Others", "15% Bill Expence"],
     datasets: [{
-        data: [30, 20, 35, 15],
-        label: "Costs in %",
-        backgroundColor: ["#343C6A", "#FA00FF", "#1814F3", "#FC7900"],
-        hoverBackgroundColor: ["#212643", "#8c028f", "#0c0a74", "#8b4401"],
+      data: [30, 20, 35, 15],
+      label: "Costs in %",
+      backgroundColor: ["#343C6A", "#FA00FF", "#1814F3", "#FC7900"],
+      hoverBackgroundColor: ["#212643", "#8c028f", "#0c0a74", "#8b4401"],
+      borderWidth: 10, 
     }]
   };
   const pieDiagram = (
@@ -23,9 +24,11 @@ const Diagram = () => {
           fontSize: 15
         },
         legend: {
-          display: true, //Is the legend shown?
-          position: "top" //Position of the legend.
-        }
+          display: true,
+          position: "top"
+        },
+        cutoutPercentage: 20,
+        rotation: 90
       }}
       data={pieDiagramData}
     />
