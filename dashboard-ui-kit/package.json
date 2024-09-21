@@ -42,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.25.2",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
   }
 }

@@ -1,9 +1,13 @@
 import React from 'react'
-import { Sidebar } from '../../sidebar/Sidebar'
-import { Header } from '../../header/Header.jsx';
+import { Sidebar } from '../../sidebar/Sidebar.tsx'
+import { Header } from '../../header/Header.tsx';
 import styles from './Transactions.module.css'
+/* eslint-disable */
+// @ts-ignore
 import Card from '../../../UI/Card/Card.jsx'
-import Charts from './../../../Charts/TransactionsChart';
+// @ts-ignore
+import Charts from '../../../Charts/TransactionsChart.jsx';
+/* eslint-enable */
 export default function Transactions() {
   return (
     <div className={styles.wrapper}>
@@ -44,12 +48,17 @@ export default function Transactions() {
             >
             </Card>
           </div>
-
           <div className={styles.expense}>
             <h1 className={styles.expenseTitle}>My Expense</h1>
             <Charts></Charts>
           </div>
         </div>
+
+        <footer>
+          <div className={styles.footer}>
+
+          </div>
+        </footer>
 
       </div>
     </div>

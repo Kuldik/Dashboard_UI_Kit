@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "declaration": true,
+      "jsx": "react",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "outDir": "build",
+      "rootDir": "src",
+      "strict": true,
+      "esModuleInterop": true,
+      "emitDeclarationOnly": true,
+      "allowImportingTsExtensions": true,
+      "allowSyntheticDefaultImports": true
+    }
+  }

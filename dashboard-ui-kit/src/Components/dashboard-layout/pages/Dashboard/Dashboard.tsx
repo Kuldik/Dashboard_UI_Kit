@@ -1,14 +1,21 @@
-import React , { useState, useMemo } from 'react'
-import { Sidebar } from '../../sidebar/Sidebar'
-import { Header } from '../../header/Header.jsx';
+import React , { useState, useMemo } from 'react';
+import { Sidebar } from '../../sidebar/Sidebar.tsx';
+import { Header } from '../../header/Header.tsx';
 import styles from './Dashboard.module.css'
-import Card from '../../../UI/Card/Card';
-import TransactionItem from '../../../UI/TransactionItem/TransactionItem';
-import Charts from './../../../Charts/Chart';
-import Diagram from '../../../Charts/Diagram';
+/* eslint-disable */
+// @ts-ignore
+import Card from '../../../UI/Card/Card.jsx';
+// @ts-ignore
+import TransactionItem from '../../../UI/TransactionItem/TransactionItem.jsx';
+// @ts-ignore
+import Charts from '../../../Charts/Chart.jsx';
+// @ts-ignore
+import Diagram from '../../../Charts/Diagram.jsx';
+// @ts-ignore
 import TransferItem from '../../../UI/TransferItem/TransferItem.jsx';
+// @ts-ignore
 import Linear from '../../../Charts/Linear.jsx';
-
+/* eslint-enable */
 
 export default function Transactions() {
 
