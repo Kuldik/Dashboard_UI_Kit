@@ -36,4 +36,157 @@
         color: #343C6A;
       }
     }
+
+    .transactionsTableBlock {
+
+      .transactionsTitle {
+        font-family: Mont, sans-serif;
+        font-size: 1.375rem;
+        color: #343C6A;
+        font-weight: bold;
+        padding-bottom: 1.2rem;
+      }
+
+      .transactionsTabs {
+        display: flex;
+        gap: 5.125rem;
+        margin-bottom: 0.6rem;
+        margin-left: 0.6rem;
+      }
+        
+        .transactionsTab {
+          padding-bottom: 0.3rem;
+          margin-bottom: 0.250rem;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            border-bottom: 4px solid #1814F3;
+            border-radius: 10%;
+            transform: translateY(-4px);
+          }
+        }
+
+        
+        .headerHr {
+          position: relative;
+          bottom: 0.6rem;
+          width: 100%;
+          color: #EBEEF2;
+          height: 0.1rem;
+          border: 0.1rem solid #EBEEF2;
+          margin-bottom: 1rem;
+        }
+      
+
+      .transactionsTable {
+        background-color: #ffffff;
+        border-radius: 1.563rem;
+        padding: 1.75rem;
+        width: 100%;
+
+        .transactionsHead {
+          position: relative;
+          font-size: 1.5rem;
+
+          .transactionsRow {
+            margin-bottom: 1.2rem;
+
+            .transactionsCell {
+              padding-bottom: 0.5rem;
+              color: #718EBF;
+              font-weight: 400;
+              text-align: left;
+            }
+          }
+
+          .tableHr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #EBEEF2;
+            height: 0.1rem;
+            border: 0.1rem solid #EBEEF2;
+          }
+        }
+
+        .transactionsBody {
+
+          .transactionsCellItem {
+            padding: 0.8rem 0.8rem 0.8rem 0;
+            font-size: 1.3rem;
+
+            img {
+              padding-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: end;
+      padding: 1rem;
+      .footerPages {
+        font-weight: bold;
+        color: #123288;
+        font-size: 1.2rem;
+        display: flex;
+        gap: 1.5rem;
+
+        .pagesPrev {
+          cursor: pointer;
+          display: flex;
+          gap: 0.2rem;
+        }
+
+        .pagesNext {
+          cursor: pointer;
+          display: flex;
+          gap: 0.2rem;
+        }
+
+        .pagesNumbers {
+          display: flex;
+          gap: 0.5rem;
+          cursor: pointer;
+          transition: all 0.4s;
+
+          &:hover {
+            gap: 1rem;
+          }
+
+          .page {
+            transition: all 0.2s;
+            padding: 0.2rem;
+            &:hover {
+              color: #fff;
+              cursor: pointer;
+              background: #1814F3;
+              border: 4px solid #1814F3;
+              border-radius: 10%;
+              transform: translateY(-4px);
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
   }
+
+.downloadBtn {
+  background-color: transparent;
+  color: #123288;
+  padding: 0.5rem 1rem;
+  border: #123288 1px solid;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: #123288;
+    color: #ffffff;
+  }
+}
