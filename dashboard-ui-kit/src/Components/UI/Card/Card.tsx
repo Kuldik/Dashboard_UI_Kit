@@ -9,10 +9,21 @@ export default function Card
   validationDate, 
   cardHolderName,
   cardNumber,
-  backgroundColor,
+  background,
   hideGradient,
-  ...props
-}) {
+  gradientWidth,
+  gradientColor
+} : { title?: string,
+   cardLabel?: string, 
+   balance?: string, 
+   validationDate?: string, 
+   cardHolderName?: string, 
+   cardNumber?: string, 
+   background?: string, 
+   hideGradient?: boolean,
+   gradientWidth?: string,
+   gradientColor?: string,
+  } )  {
   return (
     <div className={styles.myCards}>
       <div className={styles.cardsTitleBox}>
@@ -21,7 +32,7 @@ export default function Card
       </div>
       <div 
         className={styles.cardItems}
-        style={{ backgroundColor: backgroundColor }}
+        style={{ background: background }}
       >
         <div className={styles.balanceBox}>
           <div className={styles.balanceItems}>
@@ -40,7 +51,13 @@ export default function Card
             <div className={styles.validationDate}>{validationDate}</div>
           </div>
         </div>
-        <div className={`${styles.cardFooter} ${hideGradient ? styles.hideGradient : ''}`}>
+        <div className=
+          {`${styles.cardFooter} ${hideGradient ? styles.hideGradient : ''}`}
+          style={{
+            "--gradient-width": gradientWidth,
+            "--gradient-color": gradientColor,
+          } as React.CSSProperties}
+        >
           <div className={styles.cardNumber}>{cardNumber}</div>
           <img src="/img/Cards/visa.svg" alt="visa" />
         </div>

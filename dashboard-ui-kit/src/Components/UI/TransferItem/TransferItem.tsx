@@ -6,7 +6,12 @@ export default function TransferItem
         name,
         position,
         icon
-    } 
+    } :
+    {
+        name?: string,
+        position?: string,
+        icon?: string
+    }
 ) {
   return (
     <div className={styles.wrapper}>

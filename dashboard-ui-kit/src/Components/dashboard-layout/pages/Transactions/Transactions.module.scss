@@ -35,6 +35,21 @@
         font-weight: 600;
         color: #343C6A;
       }
+
+      div {
+        div {
+          canvas {
+            margin-top: 2.5rem;
+            object-fit: contain;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 1.563rem;
+            height: 100% !important;
+            max-height: 100% !important;
+          }
+        }
+        
+      }
     }
 
     .transactionsTableBlock {

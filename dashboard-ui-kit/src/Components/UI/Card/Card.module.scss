@@ -15,7 +15,7 @@
   
       .cardLabel {
         font-family: Mont, sans-serif;
-        font-size: 1.063rem;
+        font-size: 1.4rem;
         color: #343C6A;
         font-weight: 600;
       }
@@ -24,9 +24,10 @@
     .cardItems {
       display: flex;
       flex-direction: column;
-      width: 330px;
-      background-color: #0A06F4;
-      padding: 1.3rem;
+      min-width: 350px;
+      width: 100%;
+      background: #0A06F4;
+      padding: 1.8rem;
       border-radius: 1rem;
   
       .balanceBox {
@@ -36,21 +37,21 @@
   
         .balanceItems {
           p {
-            font-size: 0.75rem;
+            font-size: 1.3rem;
             color: #FFFFFF;
           }
   
           .balance {
             font-family: Mont, sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: #FFFFFF;
           }
   
           img {
             object-fit: contain;
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
           }
         }
       }
@@ -103,14 +104,14 @@
       &::before {
         content: "";
         position: absolute;
-        top: -10px;
-        left: -20px;
-        width: 329px;
+        top: -6px;
+        left: -28px;
+        width: var(--gradient-width);
         height: 100%;
-        background: linear-gradient(to bottom, #ffffff41, #0A06F4);
+        background: linear-gradient(to bottom, #ffffff41, var(--gradient-color));
         z-index: 1;
       }
-  
+      
       .cardNumber {
         color: #FFFFFF;
         font-family: Mont, sans-serif;

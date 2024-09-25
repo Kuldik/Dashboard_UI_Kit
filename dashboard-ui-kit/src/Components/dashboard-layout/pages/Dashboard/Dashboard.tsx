@@ -4,15 +4,15 @@ import { Header } from '../../header/Header.tsx';
 import styles from './Dashboard.module.css'
 /* eslint-disable */
 // @ts-ignore
-import Card from '../../../UI/Card/Card.jsx';
+import Card from '../../../UI/Card/Card.tsx';
 // @ts-ignore
-import TransactionItem from '../../../UI/TransactionItem/TransactionItem.jsx';
+import TransactionItem from '../../../UI/TransactionItem/TransactionItem.tsx';
 // @ts-ignore
 import Charts from '../../../Charts/Chart.jsx';
 // @ts-ignore
 import Diagram from '../../../Charts/Diagram.jsx';
 // @ts-ignore
-import TransferItem from '../../../UI/TransferItem/TransferItem.jsx';
+import TransferItem from '../../../UI/TransferItem/TransferItem.tsx';
 // @ts-ignore
 import Linear from '../../../Charts/Linear.jsx';
 /* eslint-enable */
@@ -59,6 +59,8 @@ export default function Transactions() {
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
                 cardNumber="3778 **** **** 1234"
+                gradientWidth="349px" 
+                gradientColor="#0A06F4"
               >
               </Card>
               <Card
@@ -67,8 +69,9 @@ export default function Transactions() {
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
                 cardNumber="3778 **** **** 5234"
-                backgroundColor="#B1B1B1"
-                hideGradient={true}
+                background="#B1B1B1"
+                gradientWidth="349px" 
+                gradientColor="#B1B1B1"
               >
               </Card>
               <Card
@@ -77,8 +80,9 @@ export default function Transactions() {
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
                 cardNumber="3778 **** **** 1453"
-                backgroundColor="#FFC500"
-                hideGradient={true}
+                background="#FFC500"
+                gradientWidth="349px" 
+                gradientColor="#FFC500"
               >
               </Card>
             </div>

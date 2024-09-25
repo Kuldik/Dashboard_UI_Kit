@@ -8,6 +8,12 @@ export default function TransactionItem
         date,
         amount,
         amountColor
+} : { 
+  icon?: string, 
+  title?: string, 
+  date?: string, 
+  amount?: string, 
+  amountColor?: string
 }) {
   return (
     <div className={styles.wrapper}>
