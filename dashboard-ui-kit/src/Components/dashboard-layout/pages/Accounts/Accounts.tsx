@@ -7,7 +7,22 @@ import styles from './Accounts.module.css'
 import Card from '../../../UI/Card/Card.tsx'
 // @ts-ignore
 import Charts from '../../../Charts/TransactionsChart.jsx';
+// @ts-ignore
+import AccountsChart from '../../../Charts/AccountsChart.jsx';
 /* eslint-enable */
+
+
+const getAmountClass = (amount : string) => {
+  if (amount && amount.startsWith('-')) {
+    return styles.negative;
+  } else {
+    return styles.positive;
+  }
+};
+
+const value1 = '-$150';
+const value2 = '-$340';
+const value3 = '+$780';
 
 export default function Transactions() {
   return (
@@ -87,8 +102,8 @@ export default function Transactions() {
                     <p>Pending</p>
                   </div>
 
-                  <div className={styles.amount}>
-                    <p>-$150</p>
+                  <div className={getAmountClass(value1)}>
+                    {value1}
                   </div>
                 </div>
                 <div className={styles.transactionsItem}>
@@ -114,8 +129,8 @@ export default function Transactions() {
                   <p>Pending</p>
                 </div>
 
-                <div className={styles.amount}>
-                  <p>-$150</p>
+                <div className={getAmountClass(value2)}>
+                  {value2}
                 </div>
                 </div>
 
@@ -142,8 +157,8 @@ export default function Transactions() {
                   <p>Pending</p>
                 </div>
 
-                <div className={styles.amount}>
-                  <p>-$150</p>
+                <div className={getAmountClass(value3)}>
+                  {value3}
                 </div>
                 </div>
 
@@ -157,9 +172,102 @@ export default function Transactions() {
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
                 cardNumber="3778 **** **** 1234"
-                gradientWidth="362px" 
+                gradientWidth="358px" 
                 gradientColor="#0A06F4"
               />
+            </div>
+          </div>
+
+          <div className={styles.overviewBox}>
+            <div className={styles.overviewMain}>
+
+              <div className={styles.overviewChartBox}>
+                <div className={styles.overviewTitleBox}>
+                  <p className={styles.overviewTitle}>Debit & Credit Overview</p>
+                </div>
+                <div className={styles.overviewChart}>
+                  <AccountsChart/>
+                </div>
+              </div>
+
+              <div className={styles.invoiceBox}>
+                <div className={styles.invoiceTitleBox}>
+                  <p className={styles.invoiceTitle}>Invoices Sent</p>
+                </div>
+                <div className={styles.invoiceMainContainer}>
+                  <div className={styles.invoiceItemContainer}>
+                    <div className={styles.invoiceInfoBox}>
+
+                      <div className={styles.iconBox}>
+                        <img src="/img/Transactions/apple.svg" alt="" />
+                      </div>
+                      
+                      <div className={styles.textBox}>
+                        <b className={styles.title}>Apple Store</b>
+                        <p className={styles.time}>5h ago</p>
+                      </div>
+                    </div>
+                    <div className={styles.invoicePriceBox}>
+                      <p className={styles.price}>$450</p>
+                    </div>
+                    
+                  </div>
+
+                  <div className={styles.invoiceItemContainer}>
+                    <div className={styles.invoiceInfoBox}>
+
+                      <div className={styles.iconBox}>
+                        <img src="/img/Transactions/mike.svg" alt="" />
+                      </div>
+                      
+                      <div className={styles.textBox}>
+                        <b className={styles.title}>Michael</b>
+                        <p className={styles.time}>2 days ago</p>
+                      </div>
+                    </div>
+                    <div className={styles.invoicePriceBox}>
+                      <p className={styles.price}>$160</p>
+                    </div>
+                    
+                  </div>
+
+                  <div className={styles.invoiceItemContainer}>
+                    <div className={styles.invoiceInfoBox}>
+
+                      <div className={styles.iconBox}>
+                        <img src="/img/Transactions/ps.svg" alt="" />
+                      </div>
+                      
+                      <div className={styles.textBox}>
+                        <b className={styles.title}>Playstation</b>
+                        <p className={styles.time}>5 days ago</p>
+                      </div>
+                    </div>
+                    <div className={styles.invoicePriceBox}>
+                      <p className={styles.price}>$1085</p>
+                    </div>
+                    
+                  </div>
+
+                  <div className={styles.invoiceItemContainer}>
+                    <div className={styles.invoiceInfoBox}>
+
+                      <div className={styles.iconBox}>
+                        <img src="/img/Transactions/profile.svg" alt="" />
+                      </div>
+                      
+                      <div className={styles.textBox}>
+                        <b className={styles.title}>William</b>
+                        <p className={styles.time}>10 days ago</p>
+                      </div>
+                    </div>
+                    <div className={styles.invoicePriceBox}>
+                      <p className={styles.price}>$90</p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
