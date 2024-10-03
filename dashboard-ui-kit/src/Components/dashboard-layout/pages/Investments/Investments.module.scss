@@ -2,5 +2,249 @@
     display: grid;
     min-height: 100vh;
     grid-template-columns: 0.8fr 6fr;
-    grid-gap: 1rem;
+      
+    .main {
+        margin-top: 1.9rem;
+        background-color: #F5F7FA;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        min-height: 90vh;
+        padding-bottom: 0.7rem;
+
+        .balanceItems {
+            padding-top: 1.5rem;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+    
+            .balanceItem {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                background-color: #fff;
+                padding: 1.7rem 6rem 1.7rem 6rem;
+                border-radius: 1.563rem;
+    
+                .iconBox {
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                    }
+                }
+                
+                .itemsBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+    
+                    .text {
+                        font-size: 1.2rem;
+                        color: #718EBF
+                    }
+    
+                    .number {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: #232323;
+                    }
+                }
+            }
+        }
+
+        .chartsBlock {
+            .chartsContainer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                .chartsTotal {
+                    .titleBox {
+                        margin-bottom: 1.2rem;
+                        margin-top: 1.5rem;
+                        align-items: baseline;
+    
+                        .title {
+                            font-family: Mont, sans-serif;
+                            font-size: 1.375rem;
+                            font-weight: 600;
+                            color: #343C6A;
+                        }
+                    }
+
+                    canvas {
+                        display: block; 
+                        margin: auto; 
+                        background: #fff;
+                        padding: 1.75rem !important;
+                        border-radius: 1rem !important;
+                        width: 100% !important;
+                        height: 100% !important;
+                        max-width: 800px !important;
+                        max-height: 500px !important; 
+                    }
+                }
+            }
+        }
+
+        .investmentsBlock {
+            .investmentsContainer {
+                margin-top: 5rem;
+                display: grid;
+                gap: 3rem;
+                grid-template-columns: 1.5fr 1fr;
+
+                .investmentsBox {
+                    .titleBox {
+                        margin-bottom: 1.2rem;
+                        margin-top: 1.5rem;
+                        align-items: baseline;
+
+                        .title {
+                            font-family: Mont, sans-serif;
+                            font-size: 1.375rem;
+                            font-weight: 600;
+                            color: #343C6A;
+                        }
+                    }
+
+                    .investmentsItems {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+
+                        .investmentsItem {
+                            text-align: left;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 2rem;
+                            background-color: #fff;
+                            padding: 1.7rem;
+                            border-radius: 1.563rem;
+
+                            .icon {
+                                img {
+                                    width: 70px;
+                                    height: 70px;
+                                    object-fit: contain;
+                                }
+                            }
+
+                            .info {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 2rem;
+
+                                .text {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 0.5rem;
+                                }
+                                
+                                .title {
+                                    font-size: 1.5rem;
+                                    font-weight: bold;
+                                    min-width: 220px;
+
+                                }
+
+                                .subtitle {
+                                    font-size: 1.2rem;
+                                    color: #718EBF;
+                                }
+                            }
+
+                            .amount {
+                                display: flex;
+                                gap: 0.5rem;
+                                flex-direction: column;
+
+                                .number {
+                                    font-size: 1.5rem;
+                                }
+
+                                .text {
+                                    font-size: 1.2rem;
+                                    color: #718EBF;
+                                }
+                            }
+
+                            .return {
+                                display: flex;
+                                gap: 0.5rem;
+                                flex-direction: column;
+
+                                .number {
+                                    font-size: 1.3rem;
+                                    color: #16DBAA;
+                                }
+
+                                .text {
+                                    font-size: 1.2rem;
+                                    color: #718EBF;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .trendingBox {
+                    .trendingTitleBox {
+                        margin-bottom: 1.2rem;
+                        margin-top: 1.5rem;
+                        align-items: baseline;
+    
+                        .title {
+                            font-family: Mont, sans-serif;
+                            font-size: 1.375rem;
+                            font-weight: 600;
+                            color: #343C6A;
+                        }
+                    }
+
+                    .tableBox {
+                        background-color: #fff;
+                        border-radius: 1.5rem;
+                        padding: 1.3rem;
+                      }
+                      
+                      .table {
+                        width: 100%;
+                        border-collapse: collapse;
+                      }
+                      
+                      .headerBox {
+                        border-bottom: 1px solid #F4F5F7;
+                      }
+                      
+                      .header {
+                        font-size: 1.5rem;
+                        padding: 0.5rem;
+                        font-weight: normal;
+                        color: #718EBF;
+                        text-align: left;
+                      }
+                      
+                      .row {
+                        font-size: 1.5rem;
+                        padding: 1.06rem;
+                        text-align: left;
+                    }
+                      
+                      .row:last-child {
+                        border-bottom: none;
+                    }
+                      
+                      .tableBox th, .tableBox td {
+                        vertical-align: middle;
+                    }
+                      
+                      .tableBox td {
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+
 }
