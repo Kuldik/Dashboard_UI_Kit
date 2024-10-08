@@ -64,7 +64,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="+ Add"
+                cardLabel="&nbsp;"
                 balance="$4,313"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
