@@ -7,10 +7,9 @@
 .logoBox {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin: 0 4rem 2.5rem 3rem;
   height: 4rem;
   gap: 1rem;
-  margin: 0 4rem 2.5rem 3rem;
 }
 
 .logoText {
@@ -30,8 +29,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   padding-left: 3rem;
   transition: all 0.3s ease-in-out;
 }
@@ -44,6 +42,18 @@
   color: #1814F3;
 }
 .menuBox:hover img {
+  filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
+  background-color: #1814F3;
+  background: transparent;
+}
+.menuBox.active {
+  border-left: 4px solid #1814F3;
+  border-radius: 5px 0 0 5px;
+}
+.menuBox.active .btn {
+  color: #1814F3;
+}
+.menuBox.active img {
   filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
   background-color: #1814F3;
   background: transparent;

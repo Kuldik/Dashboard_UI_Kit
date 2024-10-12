@@ -165,7 +165,7 @@ export default function Transactions() {
               </div>
             </div>
 
-            <div className={styles.CardBox}>
+            <div className={styles.cardBox}>
               <Card
                 title="My Card"
                 balance="$5,756"

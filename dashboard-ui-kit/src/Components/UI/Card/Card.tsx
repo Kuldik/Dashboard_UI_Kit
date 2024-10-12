@@ -4,7 +4,8 @@ import { CreateCard } from '../CreateCard/CreateCard';
 
 export default function Card({
   title,
-  cardLabel,
+  addCard,
+  seeAll,
   balance, 
   validationDate, 
   cardHolderName,
@@ -16,7 +17,8 @@ export default function Card({
   onClose
 } : { 
   title?: string,
-  cardLabel?: string, 
+  addCard?: string, 
+  seeAll?: string,
   balance?: string, 
   validationDate?: string, 
   cardHolderName?: string, 
@@ -41,10 +43,13 @@ export default function Card({
 
   return (
     <div className={styles.myCards}>
-      <div className={styles.cardsTitleBox}>
-        <div className={styles.cardsTitle}>{title}</div>
-        <button className={styles.cardLabel} onClick={handleOpenModal}>
-          {cardLabel}
+      <div className={styles.cardsTitle}>{title}</div>
+      <div className={styles.cardsTitleBox} style={{ justifyContent: 'right', display: 'flex' }}>
+        <button className={styles.addCard}>
+          {seeAll}
+        </button>
+        <button className={styles.addCard} onClick={handleOpenModal}>
+          {addCard}
         </button>
       </div>
       <div 
@@ -82,7 +87,8 @@ export default function Card({
       {isModalOpen && (
         <div className={styles.modalOverlay} onClick={handleCloseModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <CreateCard 
+            <CreateCard
+              innerTitle='Add Credit Card'
               label='Credit Card generally means a plastic card issued by Scheduled Commercial 
                 Banks assigned to a Cardholder, with a credit limit, that can be used to 
                 purchase goods and services on credit or obtain cash advances.'

@@ -11,10 +11,18 @@
   align-items: center;
 }
 .myCards .modalContent {
+  display: contents;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  border-radius: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.myCards .cardsTitle {
+  font-family: Mont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #343C6A;
+  position: relative;
+  top: 1rem;
 }
 .myCards .cardsTitleBox {
   display: flex;
@@ -23,13 +31,7 @@
   margin-top: 1.2rem;
   align-items: baseline;
 }
-.myCards .cardsTitleBox .cardsTitle {
-  font-family: Mont, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #343C6A;
-}
-.myCards .cardsTitleBox .cardLabel {
+.myCards .cardsTitleBox .addCard {
   font-family: Mont, sans-serif;
   font-size: 1.4rem;
   color: #343C6A;

@@ -33,7 +33,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="&nbsp;"
+                addCard="&nbsp;"
                 balance="$4,313"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
@@ -44,7 +44,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="&nbsp;"
+                addCard="&nbsp;"
                 balance="$1,250"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
@@ -55,7 +55,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="&nbsp;"
+                addCard="&nbsp;"
                 balance="-$15,756"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
@@ -189,6 +189,7 @@ export default function Transactions() {
           <div className={styles.cardActions}>
             <div className={styles.addCard}>
             <CreateCard
+              title='Add New Card'
               label='Credit Card generally means a plastic card issued by Scheduled Commercial 
                       Banks assigned to a Cardholder, with a credit limit, that can be used to 
                       purchase goods and services on credit or obtain cash advances.'

@@ -118,6 +118,9 @@
 .wrapper .transactionsBox .lastTransactions .transactionsMain .transactionsItem .positive {
   color: #16DBAA;
 }
+.wrapper .transactionsBox .cardBox {
+  margin-top: 0.5rem;
+}
 .wrapper .overviewBox .overviewMain {
   display: grid;
   grid-template-columns: 2.2fr 0.73fr;

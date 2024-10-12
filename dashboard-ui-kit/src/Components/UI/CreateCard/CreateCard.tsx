@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 /* eslint-enable */
 export const CreateCard = ({
     title,
+    innerTitle,
     label,
     cardType,
     nameOnCard,
@@ -16,6 +17,7 @@ export const CreateCard = ({
     onClose
   }: {
     title?: string;
+    innerTitle?: string;
     label: string;
     cardType?: boolean;
     nameOnCard?: boolean;
@@ -33,7 +35,12 @@ export const CreateCard = ({
   
           <div className={styles.cardCreation}>
             <div className={styles.container}>
-              <div className={styles.cardLabel}>
+              {innerTitle && (
+                <div className={styles.titleBox}>
+                  <p className={styles.title}>{innerTitle}</p>
+                </div>
+              )}
+              <div className={styles.addCard}>
                 <p className={styles.text}>{label}</p>
               </div>
   

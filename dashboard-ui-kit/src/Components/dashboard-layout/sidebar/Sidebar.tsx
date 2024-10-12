@@ -1,51 +1,38 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+const menuItems = [
+  { path: '/', name: 'Dashboard', icon: '/img/SidebarIcons/dashboard.svg' },
+  { path: '/transactions', name: 'Transactions', icon: '/img/SidebarIcons/transactions.svg' },
+  { path: '/accounts', name: 'Accounts', icon: '/img/SidebarIcons/accounts.svg' },
+  { path: '/investments', name: 'Investments', icon: '/img/SidebarIcons/investments.svg' },
+  { path: '/credit-cards', name: 'Credit Cards', icon: '/img/SidebarIcons/creditCards.svg' },
+  { path: '/loans', name: 'Loans', icon: '/img/SidebarIcons/loans.svg' },
+  { path: '/services', name: 'Services', icon: '/img/SidebarIcons/Services.svg' },
+  { path: '/my-privileges', name: 'My Privileges', icon: '/img/SidebarIcons/MyPrivilege.svg' },
+  { path: '/settings', name: 'Settings', icon: '/img/SidebarIcons/settings.svg' },
+];
+
 export function Sidebar() {
-    return (
-        <div className={styles.wrapper}>
-            <div className={styles.logoBox}>
-                <img src="/img/SidebarIcons/logoCard.svg" alt="logo" />
-                <h1 className={styles.logoText}>BankDash.</h1>
-            </div>
-            <div className={styles.menu}>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/dashboard.svg" alt="" />
-                    <Link to="/" className={styles.btn}>Dashboard</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/transactions.svg" alt="" />
-                    <Link to="/transactions" className={styles.btn}>Transactions</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/accounts.svg" alt="" />
-                    <Link to="/accounts" className={styles.btn}>Accounts</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/investments.svg" alt="" />
-                    <Link to="/investments" className={styles.btn}>Investments</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/creditCards.svg" alt="" />
-                    <Link to="/credit-cards" className={styles.btn}>Credit Cards</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/loans.svg" alt="" />
-                    <Link to="/loans" className={styles.btn}>Loans</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/Services.svg" alt="" />
-                    <Link to="/services" className={styles.btn}>Services</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/MyPrivilege.svg" alt="" />
-                    <Link to="/my-privileges" className={styles.btn}>My Privileges</Link>
-                </div>
-                <div className={styles.menuBox}>
-                    <img src="/img/SidebarIcons/settings.svg" alt="" />
-                    <Link to="/settings" className={styles.btn}>Settings</Link>
-                </div>
-            </div>
-            </div>
-    );
+  const location = useLocation();
+
+  const getActiveClass = (path: string) => location.pathname === path ? styles.active : '';
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.logoBox}>
+        <img src="/img/SidebarIcons/logoCard.svg" alt="logo" />
+        <h1 className={styles.logoText}>BankDash.</h1>
+      </div>
+      <div className={styles.menu}>
+        {menuItems.map((item, index) => (
+          <div key={index} className={`${styles.menuBox} ${getActiveClass(item.path)}`}>
+            <img src={item.icon} alt="" />
+            <Link to={item.path} className={styles.btn}>{item.name}</Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

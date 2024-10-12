@@ -88,7 +88,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="&nbsp;"
+                addCard="&nbsp;"
                 balance="$4,313"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
@@ -99,7 +99,7 @@ export default function Transactions() {
               >
               </Card>
               <Card
-                cardLabel="+ Add Card"
+                addCard="+ Add Card"
                 balance="-$15,756"
                 validationDate="12/22"
                 cardHolderName="Eddy Cusuma"
