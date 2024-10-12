@@ -2,5 +2,144 @@
     display: grid;
     min-height: 100vh;
     grid-template-columns: 0.8fr 6fr;
-    grid-gap: 1rem;
+      
+    .main {
+        margin-top: 1.9rem;
+        background-color: #F5F7FA;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        min-height: 90vh;
+        padding-bottom: 0.7rem;
+
+        .balanceItems {
+            padding-top: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+    
+            .balanceItem {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                background-color: #fff;
+                padding: 1.7rem 3rem 1.7rem 3rem;
+                border-radius: 1.563rem;
+    
+                .iconBox {
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                    }
+                }
+                
+                .itemsBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+    
+                    .text {
+                        font-size: 1.2rem;
+                        color: #718EBF
+                    }
+    
+                    .number {
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        color: #232323;
+                        text-wrap: nowrap;
+                    }
+                }
+            }
+        }
+        
+        .overview {
+            margin-bottom: 2rem;
+            .overviewTitleBox {
+                margin-bottom: 1.2rem;
+                margin-top: 1.2rem;
+                align-items: baseline;
+
+                .overviewTitle {
+                    font-family: Mont, sans-serif;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #343C6A;
+                }
+            }
+
+            .overviewContainer {
+                background-color: #fff;
+                border-radius: 1.5rem;
+                padding: 1.3rem;
+
+                th {
+                    vertical-align: middle;
+                }
+
+                td {
+                    vertical-align: middle;
+                    color: #666;
+                }
+          
+                .table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    .headerBox {
+                        border-bottom: 1px solid #E6EFF5;
+
+                        .header {
+                            font-size: 1.5rem;
+                            padding: 0.5rem;
+                            font-weight: normal;
+                            color: #718EBF;
+                            text-align: left;
+                        }
+                    }
+
+                    .rowBox {
+                        .row {
+                            font-size: 1.5rem;
+                            padding: 1.06rem;
+                            text-align: left;
+                            border-bottom: 1px solid #F2F4F7;
+                        }
+                    }
+
+                    .rowFooterBox {
+                        .rowFooterItem {
+                            color: #FE5C73;
+                            font-size: 1.5rem;
+                            padding: 1.06rem;
+                            text-align: left;
+
+                            &:last-child {
+                                border-bottom: 1px soldi #F4F5F7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    background-color: transparent;
+    color: #232323;
+    border: 1px solid #232323;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #1814F3;
+        color: #1814F3;
+    }
 }

@@ -14,11 +14,14 @@
 
     .balanceItems {
         padding-top: 1.5rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 2rem;
         width: 100%;
         justify-content: space-between;
 
         .balanceItem {
+            text-wrap: nowrap;
             display: flex;
             align-items: center;
             gap: 2rem;
