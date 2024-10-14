@@ -1,26 +1,48 @@
-import React from 'react'
-import { Sidebar } from '../../sidebar/Sidebar.tsx'
-import { Header } from '../../header/Header.tsx';
-import styles from './Loans.module.css'
+import React, { useState } from 'react';
 /* eslint-disable */
-
-export default function Transactions() {
-
-  const data = [
-    // @ts-ignore
-    { slNo: '01.', loanMoney: '$100000', leftToRepay: '$40500', dutaion: '8 months', interestRate: '12%', installment: '$2000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '02.', loanMoney: '$500000', leftToRepay: '$25000', dutaion: '36 months', interestRate: '10%', installment: '$8000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '03.', loanMoney: '$900000', leftToRepay: '$40500', dutaion: '12 months', interestRate: '12%', installment: '$5000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '04.', loanMoney: '$50000', leftToRepay: '$40500', dutaion: '25 months', interestRate: '5%', installment: '$2000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '05.', loanMoney: '$50000', leftToRepay: '$40500', dutaion: '5 months', interestRate: '16%', installment: '$10000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '06.', loanMoney: '$80000', leftToRepay: '$25500', dutaion: '14 months', interestRate: '8%', installment: '$2000', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '07.', loanMoney: '$12000', leftToRepay: '$5500', dutaion: '9 months', interestRate: '13%', installment: '$500', repayBtn: <button className={styles.btn}>Repay</button> },
-    { slNo: '08.', loanMoney: '$160000', leftToRepay: '$100800', dutaion: '3 months', interestRate: '12%', installment: '$900', repayBtn: <button className={styles.btn}>Repay</button> },
-
-  ];
+import { Sidebar } from '../../sidebar/Sidebar';
+import { Header } from '../../header/Header';
+// @ts-ignore
+import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import styles from './Loans.module.css';
 /* eslint-enable */
+interface Loan {
+  slNo: string;
+  loanMoney: string;
+  leftToRepay: string;
+  dutaion: string;
+  interestRate: string;
+  installment: string;
+}
 
-  const total = data.reduce((acc, current) => {
+interface Total {
+  loanMoney: number;
+  leftToRepay: number;
+  installment: number;
+}
+
+const Loans: React.FC = () => {
+  const { register, handleSubmit } = useForm();
+  
+  const handleRepay = (index: number) => {
+    setData(data.filter((item, i) => i !== index));
+    toast.success('Loan Repayed!');
+  };
+
+  const [data, setData] = useState([
+    { slNo: '01.', loanMoney: '$100000', leftToRepay: '$40500', dutaion: '8 months', interestRate: '12%', installment: '$2000' },
+    { slNo: '02.', loanMoney: '$500000', leftToRepay: '$25000', dutaion: '36 months', interestRate: '10%', installment: '$8000' },
+    { slNo: '03.', loanMoney: '$900000', leftToRepay: '$40500', dutaion: '12 months', interestRate: '12%', installment: '$5000' },
+    { slNo: '04.', loanMoney: '$50000', leftToRepay: '$40500', dutaion: '25 months', interestRate: '5%', installment: '$2000' },
+    { slNo: '05.', loanMoney: '$50000', leftToRepay: '$40500', dutaion: '5 months', interestRate: '16%', installment: '$10000' },
+    { slNo: '06.', loanMoney: '$80000', leftToRepay: '$25500', dutaion: '14 months', interestRate: '8%', installment: '$2000' },
+    { slNo: '07.', loanMoney: '$12000', leftToRepay: '$5500', dutaion: '9 months', interestRate: '13%', installment: '$500' },
+    { slNo: '08.', loanMoney: '$160000', leftToRepay: '$100800', dutaion: '3 months', interestRate: '12%', installment: '$900' },
+  ]);
+
+  const total: Total = data.reduce((acc, current) => {
     acc.loanMoney += parseInt(current.loanMoney.replace('$', ''));
     acc.leftToRepay += parseInt(current.leftToRepay.replace('$', ''));
     acc.installment += parseInt(current.installment.replace('$', ''));
@@ -28,11 +50,10 @@ export default function Transactions() {
   }, { loanMoney: 0, leftToRepay: 0, installment: 0 });
 
   return (
-    
     <div className={styles.wrapper}>
-      <Sidebar></Sidebar>
+      <Sidebar />
       <div>
-        <Header title="Loans"></Header>
+        <Header title="Loans" />
         <div className={styles.main}>
           <div className={styles.balanceBox}>
             <div className={styles.balanceItems}>
@@ -40,7 +61,7 @@ export default function Transactions() {
                 <div className={styles.iconBox}>
                   <img src="/img/Loans/person.svg" alt="#" />
                 </div>
-                        <div className={styles.itemsBox}>
+                <div className={styles.itemsBox}>
                   <p className={styles.text}>Personal Loans</p>
                   <b className={styles.number}>$50,000</b>
                 </div>
@@ -80,7 +101,7 @@ export default function Transactions() {
               <p className={styles.overviewTitle}>Active Loans Overview</p>
             </div>
             <div className={styles.overviewContainer}>
-             <table className={styles.table}>
+              <table className={styles.table}>
                 <tr className={styles.headerBox}>
                   <th className={styles.header}>SL No</th>
                   <th className={styles.header}>Loan Money</th>
@@ -98,20 +119,25 @@ export default function Transactions() {
                     <td className={styles.row}>{item.dutaion}</td>
                     <td className={styles.row}>{item.interestRate}</td>
                     <td className={styles.row}>{item.installment} / month</td>
-                    <td className={styles.row}>{item.repayBtn}</td>
+                    <td className={styles.row}>
+                      <button className={styles.btn} onClick={() => handleRepay(index)}>Repay</button>
+                    </td>
                   </tr>
                 ))}
                 <tr className={styles.rowFooterBox}>
                   <td className={styles.rowFooterItem}>Total:</td>
-                  <td className={styles.rowFooterItem}>${total.loanMoney}</td>
-                  <td colSpan={3} className={styles.rowFooterItem}>${total.leftToRepay}</td>
-                  <td className={styles.rowFooterItem}>${total.installment} / month</td>
+                  <td className={styles.rowFooterItem}>${total.loanMoney.toLocaleString()}</td>
+                  <td colSpan={3} className={styles.rowFooterItem}>${total.leftToRepay.toLocaleString()}</td>
+                  <td className={styles.rowFooterItem}>${total.installment.toLocaleString()} / month</td>
                 </tr>
-              </table>            
+              </table>
             </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
-}
+};
+
+export default Loans;
