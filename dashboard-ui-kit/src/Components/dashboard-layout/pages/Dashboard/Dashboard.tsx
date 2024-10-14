@@ -17,7 +17,7 @@ import TransferItem from '../../../UI/TransferItem/TransferItem.tsx';
 import Linear from '../../../Charts/Linear.jsx';
 /* eslint-enable */
 
-export default function Transactions() {
+export default function Overview() {
 
   const workersList = useMemo(() => [
     { name: "Livia Bator", position: "CEO", icon: "/img/Transfer/firstItem.png" },

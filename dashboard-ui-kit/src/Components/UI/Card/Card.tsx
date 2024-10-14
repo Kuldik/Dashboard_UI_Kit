@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Card.module.css'
+/* eslint-disable */
+// @ts-ignore
 import { CreateCard } from '../CreateCard/CreateCard';
-
+import ToastWrapper from '../Toaster';
+import useCustomToast from '../Hooks/useShowToats';
+/* eslint-enable */
 export default function Card({
   title,
   addCard,
@@ -31,6 +35,7 @@ export default function Card({
 }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { showToast } = useCustomToast();
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -39,6 +44,10 @@ export default function Card({
   const handleCloseModal = () => {
     onClose?.(); 
     setIsModalOpen(false);
+  };
+
+  const handleAddCard = () => {
+    showToast('success', 'Your card has been created!');
   };
 
   return (
@@ -89,15 +98,13 @@ export default function Card({
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <CreateCard
               innerTitle='Add Credit Card'
-              label='Credit Card generally means a plastic card issued by Scheduled Commercial 
-                Banks assigned to a Cardholder, with a credit limit, that can be used to 
-                purchase goods and services on credit or obtain cash advances.'
+              label='Credit Card generally means a plastic card issued by Scheduled Commercial Banks assigned to a Cardholder, with a credit limit, that can be used to purchase goods and services on credit or obtain cash advances.'
               cardType={true}
               nameOnCard={true}
               cardNumber={true}
               expirationDate={true}
               button='Add Card'
-              onClose={handleCloseModal} 
+              onClose={handleCloseModal}
             />
           </div>
         </div>

@@ -7,7 +7,9 @@ import styles from './CreditCard.module.css'
 import Card from '../../../UI/Card/Card.tsx';
 // @ts-ignore
 import Donut from './../../../Charts/Donut';
+// @ts-ignore
 import { CreateCard } from '../../../UI/CreateCard/CreateCard.tsx';
+import ToastWrapper from '../../../UI/Toaster.tsx';
 // @ts-ignore
 /* eslint-enable */
 
@@ -188,6 +190,7 @@ export default function Transactions() {
 
           <div className={styles.cardActions}>
             <div className={styles.addCard}>
+            <ToastWrapper>
             <CreateCard
               title='Add New Card'
               label='Credit Card generally means a plastic card issued by Scheduled Commercial 
@@ -200,6 +203,7 @@ export default function Transactions() {
               button='Add Card'
               onClose={() => console.log('Модальное окно закрыто')}
             />
+            </ToastWrapper>
             </div>
             
             <div className={styles.cardSettings}>

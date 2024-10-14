@@ -3,6 +3,8 @@ import styles from './CreateCard.module.css'
 import InputField from '../InputField/InputField'
 /* eslint-disable */
 // @ts-ignore
+import { useForm } from 'react-hook-form';
+// @ts-ignore
 import { toast } from 'react-toastify';
 /* eslint-enable */
 export const CreateCard = ({
@@ -26,6 +28,11 @@ export const CreateCard = ({
     button: string;
     onClose?: () => void;
   }) => {
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = async (data : any) => {
+      // server side validation
+    };
     return (
       <div className={styles.wrapper}>
         <div className={styles.main}>

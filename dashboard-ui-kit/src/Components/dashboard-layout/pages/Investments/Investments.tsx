@@ -9,7 +9,7 @@ import Yearly from './../../../Charts/Accounts/Yearly';
 import Monthly from './../../../Charts/Accounts/Monthly';
 /* eslint-enable */
 
-export default function Transactions() {
+export default function Investments() {
   return (
     <div className={styles.wrapper}>
       <Sidebar></Sidebar>
