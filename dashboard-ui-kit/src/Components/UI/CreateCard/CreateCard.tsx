@@ -29,10 +29,6 @@ export const CreateCard = ({
     onClose?: () => void;
   }) => {
 
-    const { register, handleSubmit } = useForm();
-    const onSubmit = async (data : any) => {
-      // server side validation
-    };
     return (
       <div className={styles.wrapper}>
         <div className={styles.main}>

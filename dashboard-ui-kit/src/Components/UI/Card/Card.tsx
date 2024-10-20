@@ -3,8 +3,8 @@ import styles from './Card.module.css'
 /* eslint-disable */
 // @ts-ignore
 import { CreateCard } from '../CreateCard/CreateCard';
-import ToastWrapper from '../Toaster';
 import useCustomToast from '../Hooks/useShowToats';
+import { ToastContainer } from 'react-toastify';
 /* eslint-enable */
 export default function Card({
   title,
@@ -52,6 +52,7 @@ export default function Card({
 
   return (
     <div className={styles.myCards}>
+      <ToastContainer />
       <div className={styles.cardsTitle}>{title}</div>
       <div className={styles.cardsTitleBox} style={{ justifyContent: 'right', display: 'flex' }}>
         <button className={styles.addCard}>
