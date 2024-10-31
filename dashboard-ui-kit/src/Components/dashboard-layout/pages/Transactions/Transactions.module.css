@@ -60,10 +60,11 @@
   padding-bottom: 0.3rem;
   margin-bottom: 0.25rem;
   transition: all 0.2s ease-in-out;
+  border-bottom: 4px solid transparent;
 }
 .wrapper .transactionsTableBlock .transactionsTab:hover {
   cursor: pointer;
-  border-bottom: 4px solid #1814F3;
+  border-bottom-color: #1814F3; /* change border color on hover */
   border-radius: 10%;
   transform: translateY(-4px);
 }

@@ -2,6 +2,10 @@
   display: grid;
   min-height: 100vh;
   grid-template-columns: 0.8fr 6fr;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0;
 }
 .wrapper .main {
   margin-top: 1.9rem;

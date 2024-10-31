@@ -2,5 +2,158 @@
     display: grid;
     min-height: 100vh;
     grid-template-columns: 0.8fr 6fr;
-    grid-gap: 1rem;
+      
+    .main {
+        margin-top: 1.9rem;
+        background-color: #F5F7FA;
+        min-height: 90vh;
+        padding: 1.5rem 2.5rem;
+        
+        .settingContainer {
+            padding: 2rem;
+            border-radius: 1.563rem;
+            background-color: #ffffff;
+
+            .settingTabs {
+                display: flex;
+                gap: 5.125rem;
+                margin-bottom: 0.6rem;
+                margin-left: 0.6rem;
+
+                .settingTab {
+                    padding-bottom: 0.3rem;
+                    margin-bottom: 0.250rem;
+                    transition: all 0.2s ease-in-out;
+                    border-bottom: 4px solid transparent; 
+                  
+                    &:hover {
+                      cursor: pointer;
+                      border-bottom-color: #1814F3; 
+                      border-radius: 10%;
+                      transform: translateY(-4px);
+                    }
+                }
+            }
+
+            .editProfile {
+                .editProfileContainer {
+                    display: grid;
+                    grid-template-columns: 0.3fr 1fr 1fr;
+                    grid-gap: 2rem;
+
+                    .imageBox {
+                        img {
+                            max-width: 200px;
+                            max-height: 200px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        };
+    
+                        .imageLabel {
+                            position: relative;
+                            z-index: 9999;
+                            cursor: pointer;
+                            bottom: 10px;
+                            bottom: 60px;
+                            left: 163px;
+                        }
+                    }
+
+                    .editProfileInputBox {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+
+                        .saveBtn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: end;
+                            gap: 0.5rem;
+                        }
+                    }
+                }
+
+                
+            }
+
+            .preferences {
+                .preferencesContainer {
+                    margin-top: 1rem;
+                    .preferencesInputBox {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 3rem;
+                    }
+
+                    .notificationContainer {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        .notificationTitle {
+                            font-family: Mont, sans-serif;
+                            color: #343C6A;
+                            font-weight: bold;
+                            padding-top: 1.2rem;
+                            font-size: 1.2rem;
+                        }
+
+                        .switchBox {
+                            display: flex;
+                            gap: 1.5rem;
+                            align-items: center;
+                        }
+                    }
+
+                    .saveBtn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                    }
+                }
+            }
+
+            .security {
+                .authContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    .authTitle {
+                        font-weight: bold;
+                        font-family: Mont, sans-serif;
+                        color: #343C6A;
+                        font-size: 1.2rem;
+                    }
+
+                    .authSwitchBox {
+                        display: flex;
+                        gap: 1.5rem;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .passwordContainer {
+
+                    .passwordTitle {
+                        font-family: Mont, sans-serif;
+                        color: #343C6A;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        padding-bottom: 1.2rem;
+                        padding-top: 0.5rem;
+                    }
+
+                    .passwordInputBox {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 40%;
+                        gap: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
+
