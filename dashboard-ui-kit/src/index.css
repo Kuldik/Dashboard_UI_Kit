@@ -15,3 +15,48 @@ code {
 * {
   user-select: none;
 }
+/* Vertical scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0A06F4;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #16DBCC;
+}
+
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #0A06F4;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #16DBCC;
+}
+
+/* Make scrollbar visible only when content is larger than container */
+.container {
+  overflow-y: auto;
+  overflow-x: auto;
+}

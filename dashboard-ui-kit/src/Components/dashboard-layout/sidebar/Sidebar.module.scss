@@ -1,81 +1,168 @@
+@import '../../styles/screen.scss';
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #EAEAEF;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #EAEAEF;
+
+  
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  margin: 0 4rem 2.5rem 3rem;
+  height: 4rem;
+  gap: 1rem;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: none;
   }
-  
-  .logoBox {
-    display: flex;
-    align-items: center;
-    margin: 0 4rem 2.5rem 3rem;
-    height: 4rem;
-    gap: 1rem;
-  }
-  
-  .logoText {
-    font-family: Mont, sans-serif;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #343C6A;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2rem;
-  }
-  
-  .menuBox {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    padding-left: 3rem;
-    transition: all 0.3s ease-in-out;
-  
-    &:hover {
-      cursor: pointer;
-      border-left: 4px solid #1814F3;
-      border-radius: 5px 0 0 5px;
-  
-      .btn {
-        color: #1814F3;
-      }
-  
-      img {
-        filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
-        background-color: #1814F3;
-        background: transparent;
-      }
-    }
-  
-    &.active {
-      border-left: 4px solid #1814F3;
-      border-radius: 5px 0 0 5px;
-  
-      .btn {
-        color: #1814F3;
-      }
-  
-      img {
-        filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
-        background-color: #1814F3;
-        background: transparent;
-      }
-    }
-  
+}
+
+.logoText {
+  font-family: Mont, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #343C6A;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  padding-left: 3rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    border-left: 4px solid #1814F3;
+    border-radius: 5px 0 0 5px;
+
     .btn {
-      color: #B1B1B1; // default color
+      color: #1814F3;
     }
-  
+
     img {
-      background-color: #B1B1B1; // default color
+      filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
+      background-color: #1814F3;
       background: transparent;
     }
   }
-  
-  .btn {
-    font-size: 18px;
-    color: #B1B1B1;
-    text-decoration: none;
+
+  &.active {
+    border-left: 4px solid #1814F3;
+    border-radius: 5px 0 0 5px;
+
+    .btn {
+      color: #1814F3;
+    }
+
+    img {
+      filter: brightness(50%) saturate(100%) invert(17%) sepia(11%) hue-rotate(197deg) saturate(3000%) brightness(95%);
+      background-color: #1814F3;
+      background: transparent;
+    }
   }
+
+  .btn {
+    color: #B1B1B1; // default color
+  }
+
+  img {
+    background-color: #B1B1B1; // default color
+    background: transparent;
+  }
+}
+
+.btn {
+  font-size: 18px;
+  color: #B1B1B1;
+  text-decoration: none;
+}
+
+.burgerMenuBtn {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  background-color: #fff;
+  padding: 1rem;
+  z-index: 1;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+  }
+}
+
+.menuOpen {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 2rem;
+  border-right: 1px solid #EAEAEF;
+
+  .menuBox {
+    padding-left: 0;
+  }
+}
+
+.closeMenuBtn {
+  display: none;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background-color: #16DBCC;
+  padding: 0.3rem;
+  border: 1px solid #16DBCC;
+  z-index: 10000;
+  border-radius: round($number: 10rem);
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: #1814F3;
+  }
+}
+
+.showCloseMenuBtn {
+  display: block;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .menu {
+    display: none;
+  }
+
+  .menuOpen {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 2rem;
+    border-right: none;
+  }
+
+  .burgerMenuBtn {
+    display: block;
+  }
+}
+

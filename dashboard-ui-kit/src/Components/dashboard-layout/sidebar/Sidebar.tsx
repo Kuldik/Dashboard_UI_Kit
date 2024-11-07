@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Sidebar.module.css";
 import { Link, useLocation } from "react-router-dom";
 
@@ -16,22 +16,50 @@ const menuItems = [
 
 export function Sidebar() {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const getActiveClass = (path: string) => location.pathname === path ? styles.active : '';
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+    const menu = document.querySelector(`.${styles.menu}`);
+    if (menu) {
+      if (isMenuOpen) {
+        menu.classList.remove(styles.menuOpen);
+      } else {
+        menu.classList.add(styles.menuOpen);
+      }
+    }
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.logoBox}>
-        <img src="/img/SidebarIcons/logoCard.svg" alt="logo" />
-        <h1 className={styles.logoText}>BankDash.</h1>
-      </div>
-      <div className={styles.menu}>
-        {menuItems.map((item, index) => (
-          <div key={index} className={`${styles.menuBox} ${getActiveClass(item.path)}`}>
-            <img src={item.icon} alt="" />
-            <Link to={item.path} className={styles.btn}>{item.name}</Link>
-          </div>
-        ))}
+      <div className={styles.main}>
+        <div className={styles.logoBox}>
+          <img src="/img/SidebarIcons/logoCard.svg" alt="logo" />
+          <h1 className={styles.logoText}>BankDash.</h1>
+        </div>
+        <button className={styles.burgerMenuBtn} onClick={handleMenuToggle}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <button className={`${styles.closeMenuBtn} ${isMenuOpen ? styles.showCloseMenuBtn : ''}`} onClick={handleMenuToggle}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
+          {menuItems.map((item, index) => (
+            <div key={index} className={`${styles.menuBox} ${getActiveClass(item.path)}`}>
+              <img src={item.icon} alt="" />
+              <Link to={item.path} className={styles.btn}>{item.name}</Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
