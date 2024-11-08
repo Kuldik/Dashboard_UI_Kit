@@ -19,13 +19,48 @@
 	 grid-template-columns: 2fr 1fr;
 	 grid-gap: 4.375rem;
 	 margin-bottom: 1rem;
-	 max-height: 300px;
+
+   @media screen and (max-width: 768px) {
+    grid-template-rows: unset;
+    display: block;  
+    
+   }
+}
+
+.carousel-root {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.carousel-slider {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.carousel-slide {
+  margin: 0 auto;
+  max-width: 100%;
 }
  .wrapper .main .cardsBlock .cards {
 	 display: flex;
 	 gap: 1.875rem;
 	 margin-top: 0.3rem;
 	 margin-bottom: 1.5rem;
+
+   @media screen and (max-width: 768px) {
+    display: none;
+   }
+}
+
+.wrapper .main .cardsBlock .cardsMobile {
+  display: none;
+  gap: 1.875rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+   display: flex;
+  }
 }
  .wrapper .main .transactions .transactionsTitle {
 	 font-family: Mont, sans-serif;
@@ -43,7 +78,11 @@
 	 border-radius: 1rem;
 	 max-width: fit-content;
 	 gap: 0.4rem;
-	 max-height: 300px;
+	 max-height: 350px;
+
+   @media screen and (max-width: 768px) {
+    margin-left: 1rem;   
+   }
 }
  .wrapper .main .activity {
 	 display: grid;

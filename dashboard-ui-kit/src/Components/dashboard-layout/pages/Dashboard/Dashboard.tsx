@@ -15,6 +15,8 @@ import Diagram from '../../../Charts/Diagram.jsx';
 import TransferItem from '../../../UI/TransferItem/TransferItem.tsx';
 // @ts-ignore
 import Linear from '../../../Charts/Linear.jsx';
+// @ts-ignore
+import { Carousel } from 'react-responsive-carousel';
 /* eslint-enable */
 
 export default function Overview() {
@@ -52,7 +54,7 @@ export default function Overview() {
 
           <div className={styles.cardsBlock}>
 
-            <div className={styles.cards}>
+          <div className={styles.cards}>
               <Card
                 title="My Cards"
                 balance="$5,756"
@@ -85,6 +87,55 @@ export default function Overview() {
                 gradientColor="#FFC500"
               >
               </Card>
+            </div>
+
+            <div className={styles.cardsMobile}>
+              <Carousel
+                 showArrows={false}
+                 showStatus={false}
+                 showIndicators={false}
+                 showThumbs={false}
+                 infiniteLoop={true}
+                 swipeable={true}
+                 className={styles.cards}
+                 centerMode={true}
+                 centerSlidePercentage={100 / 3}
+            >
+              {[
+                {
+                  id: 1,
+                  title: "My Cards",
+                  balance: "$5,756",
+                  validationDate: "12/22",
+                  cardHolderName: "Eddy Cusuma",
+                  cardNumber: "3778 **** **** 1234",
+                  gradientWidth: "349px",
+                  gradientColor: "#0A06F4",
+                },
+                {
+                  id: 2,
+                  title: "My Cards",
+                  balance: "$5,756",
+                  validationDate: "12/22",
+                  cardHolderName: "Eddy Cusuma",
+                  cardNumber: "3778 **** **** 1234",
+                  gradientWidth: "349px",
+                  gradientColor: "#0A06F4",
+                },
+                {
+                  id: 3,
+                  title: "My Cards",
+                  balance: "$5,756",
+                  validationDate: "12/22",
+                  cardHolderName: "Eddy Cusuma",
+                  cardNumber: "3778 **** **** 1234",
+                  gradientWidth: "349px",
+                  gradientColor: "#0A06F4",
+                },
+              ].map((card) => (
+                <Card key={card.id} {...card} />
+              ))}
+            </Carousel>
             </div>
 
             <div className={styles.transactions}>
