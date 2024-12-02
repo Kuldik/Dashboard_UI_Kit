@@ -16,7 +16,7 @@ import PageTransition from './Components/PageTransition/PageTransition';
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Routes>
           <Route
             path="/"
