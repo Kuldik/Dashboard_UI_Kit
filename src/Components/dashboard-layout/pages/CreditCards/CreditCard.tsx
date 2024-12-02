@@ -6,7 +6,7 @@ import styles from './CreditCard.module.css'
 // @ts-ignore
 import Card from '../../../UI/Card/Card.tsx';
 // @ts-ignore
-import Donut from './../../../Charts/Donut';
+import Donut from '../../../Charts/Donut.jsx'
 // @ts-ignore
 import { CreateCard } from '../../../UI/CreateCard/CreateCard.tsx';
 import ToastWrapper from '../../../UI/Toaster.tsx';

@@ -4,11 +4,11 @@ import { Header } from '../../header/Header.tsx';
 import styles from './MyPrivileges.module.css'
 /* eslint-disable */
 // @ts-ignore
-import First from '../../../Charts/BubbleChart.jsx';
+import First from '../../../Charts/BubbleChart.js';
 // @ts-ignore
-import Radar from './../../../Charts/Radar';
+import Radar from '../../../Charts/Radar.jsx'
 // @ts-ignore
-import BubbleChart from './../../../Charts/BubbleChart';
+import BubbleChart from '../../../Charts/BubbleChart.jsx'
 
 export default function myPrivileges() {
   return (

@@ -6,7 +6,7 @@ import styles from './Accounts.module.css'
 // @ts-ignore
 import Card from '../../../UI/Card/Card.tsx'
 // @ts-ignore
-import Charts from '../../../Charts/TransactionsChart.jsx';
+import Charts from '../../../Charts/TransactionsChart.js';
 // @ts-ignore
 import AccountsChart from '../../../Charts/AccountsChart.jsx';
 /* eslint-enable */

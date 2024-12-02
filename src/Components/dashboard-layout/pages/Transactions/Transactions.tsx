@@ -6,7 +6,8 @@ import styles from './Transactions.module.css'
 // @ts-ignore
 import Card from '../../../UI/Card/Card.tsx'
 // @ts-ignore
-import Charts from '../../../Charts/TransactionsChart.jsx';
+// import Charts from '../../../Charts/TransactionsChart.js';
+import Charts from '../../../Charts/TransactionsChart.jsx'
 /* eslint-enable */
 
 const transactions = [

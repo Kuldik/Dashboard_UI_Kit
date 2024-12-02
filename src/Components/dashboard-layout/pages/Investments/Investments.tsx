@@ -4,9 +4,9 @@ import { Header } from '../../header/Header.tsx';
 import styles from './Investments.module.css'
 /* eslint-disable */
 // @ts-ignore
-import Yearly from './../../../Charts/Accounts/Yearly';
+import Yearly from '../../../Charts/Accounts/Yearly.jsx'
 // @ts-ignore
-import Monthly from './../../../Charts/Accounts/Monthly';
+import Monthly from '../../../Charts/Accounts/Monthly.jsx'
 /* eslint-enable */
 
 export default function Investments() {

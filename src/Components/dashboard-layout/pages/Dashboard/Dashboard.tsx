@@ -8,7 +8,7 @@ import Card from '../../../UI/Card/Card.tsx';
 // @ts-ignore
 import TransactionItem from '../../../UI/TransactionItem/TransactionItem.tsx';
 // @ts-ignore
-import Charts from '../../../Charts/Chart.jsx';
+import Charts from '../../../Charts/Chart.jsx'
 // @ts-ignore
 import Diagram from '../../../Charts/Diagram.jsx';
 // @ts-ignore

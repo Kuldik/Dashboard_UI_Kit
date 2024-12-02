@@ -4,7 +4,7 @@ import { Header } from '../../header/Header.tsx';
 import styles from './Settings.module.css'
 import InputField from '../../../UI/InputField/InputField.tsx';
 import { Button } from '../../../UI/Button/Button.tsx';
-import { Switch } from '../../../UI/Switch/Switch';
+import { Switch } from '../../../UI/Switch/Switch.tsx';
 export default function Setting() {
 
   const [activeTab, setActiveTab] = useState('editProfile');
