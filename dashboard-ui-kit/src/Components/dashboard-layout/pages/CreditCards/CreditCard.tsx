@@ -10,10 +10,17 @@ import Donut from './../../../Charts/Donut';
 // @ts-ignore
 import { CreateCard } from '../../../UI/CreateCard/CreateCard.tsx';
 import ToastWrapper from '../../../UI/Toaster.tsx';
+import { toast, ToastContainer } from 'react-toastify';
 // @ts-ignore
 /* eslint-enable */
 
+
 export default function Transactions() {
+
+  const handleAdd = (index: number) => {
+    toast.success('Loan Repayed!');
+  };
+  
   return (
     <div className={styles.wrapper}>
       <Sidebar></Sidebar>
@@ -191,19 +198,19 @@ export default function Transactions() {
           <div className={styles.cardActions}>
             <div className={styles.addCard}>
             <ToastWrapper>
-            <CreateCard
-              title='Add New Card'
-              label='Credit Card generally means a plastic card issued by Scheduled Commercial 
-                      Banks assigned to a Cardholder, with a credit limit, that can be used to 
-                      purchase goods and services on credit or obtain cash advances.'
-              cardType={true}
-              nameOnCard={true}
-              cardNumber={true}
-              expirationDate={true}
-              button='Add Card'
-              onClose={() => console.log('Модальное окно закрыто')}
-            />
-            </ToastWrapper>
+                <CreateCard
+                  title='Add New Card'
+                  label='Credit Card generally means a plastic card issued by Scheduled Commercial 
+                          Banks assigned to a Cardholder, with a credit limit, that can be used to 
+                          purchase goods and services on credit or obtain cash advances.'
+                  cardType={true}
+                  nameOnCard={true}
+                  cardNumber={true}
+                  expirationDate={true}
+                  button='Add Card'
+                  onClose={() => console.log('Модальное окно закрыто')}
+                />
+              </ToastWrapper>
             </div>
             
             <div className={styles.cardSettings}>
@@ -283,6 +290,7 @@ export default function Transactions() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   )
 }

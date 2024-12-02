@@ -5,7 +5,7 @@ import InputField from '../InputField/InputField'
 // @ts-ignore
 import { useForm } from 'react-hook-form';
 // @ts-ignore
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 /* eslint-enable */
 export const CreateCard = ({
     title,
@@ -97,6 +97,7 @@ export const CreateCard = ({
             </div>
           </div>
         </div>
+        <ToastContainer/>
       </div>
     );
   };
