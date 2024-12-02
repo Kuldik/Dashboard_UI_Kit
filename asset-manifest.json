@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Dashboard-Ui-Kit/static/css/main.8e6585b9.css",
+    "main.js": "/Dashboard-Ui-Kit/static/js/main.a0b0d5ca.js",
+    "index.html": "/Dashboard-Ui-Kit/index.html",
+    "main.8e6585b9.css.map": "/Dashboard-Ui-Kit/static/css/main.8e6585b9.css.map",
+    "main.a0b0d5ca.js.map": "/Dashboard-Ui-Kit/static/js/main.a0b0d5ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e6585b9.css",
+    "static/js/main.a0b0d5ca.js"
+  ]
+}
