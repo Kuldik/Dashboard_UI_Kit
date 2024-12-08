@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Dashboard from './Components/dashboard-layout/pages/Dashboard/Dashboard';
 import Transactions from './Components/dashboard-layout/pages/Transactions/Transactions';
 import Accounts from './Components/dashboard-layout/pages/Accounts/Accounts';
@@ -13,10 +13,13 @@ import { DashboardLayout } from './Components/dashboard-layout/DashboardLayout';
 // @ts-ignore
 import PageTransition from './Components/PageTransition/PageTransition';
 
-
 const Router = () => {
+
+
+  const basename = process.env.NODE_ENV === 'production' ? '/Dashboard-Ui-Kit' : '';
+
   return (
-    <BrowserRouter >
+    <HashRouter basename={basename}>
       <Routes>
           <Route
             path="/"
@@ -91,7 +94,7 @@ const Router = () => {
             }
           />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 export default Router;
