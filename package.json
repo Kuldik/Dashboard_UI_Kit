@@ -1,7 +1,7 @@
 {
   "name": "dashboard-ui-kit",
   "version": "0.1.0",
-  "homepage": "https://Kuldik.github.io/Dashboard-Ui-Kit",
+  "homepage": "https://Kuldik.github.io/Dashboard_Ui_Kit",
   "private": true,
   "dependencies": {
     "@amcharts/amcharts5": "^5.10.5",
