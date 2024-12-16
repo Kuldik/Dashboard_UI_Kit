@@ -14,8 +14,10 @@ import PageTransition from './Components/PageTransition/PageTransition';
 
 const Router = () => {
 
+  // const basename = process.env.NODE_ENV === 'production' ? '/Dashboard-Ui-Kit' : '';
+
   return (
-    <BrowserRouter basename='/Dashboard_UI_Kit'>
+    <BrowserRouter basename='/Dashboard-Ui-Kit'>
       <Routes>
           <Route
             path="/"
