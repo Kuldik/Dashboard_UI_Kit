@@ -1,4 +1,4 @@
-import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Dashboard from './Components/dashboard-layout/pages/Dashboard/Dashboard';
 import Transactions from './Components/dashboard-layout/pages/Transactions/Transactions';
 import Accounts from './Components/dashboard-layout/pages/Accounts/Accounts';
@@ -8,16 +8,12 @@ import Loans from './Components/dashboard-layout/pages/Loans/Loans';
 import Services from './Components/dashboard-layout/pages/Services/Services';
 import MyPrivileges from './Components/dashboard-layout/pages/MyPrivileges/MyPrivileges';
 import Settings from './Components/dashboard-layout/pages/Settings/Settings';
-/* eslint-disable */
-// @ts-ignore
 import PageTransition from './Components/PageTransition/PageTransition';
 
 const Router = () => {
 
-  // const basename = process.env.NODE_ENV === 'production' ? '/Dashboard-Ui-Kit' : '';
-
   return (
-    <BrowserRouter basename='/Dashboard-Ui-Kit'>
+    <BrowserRouter basename='/Dashboard_UI_Kit'>
       <Routes>
           <Route
             path="/"
@@ -92,7 +88,7 @@ const Router = () => {
             }
           />
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 };
 export default Router;
