@@ -95,7 +95,7 @@ export default function Transactions() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Cards/blue.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Cards/blue.svg`} alt="#" />
                       </div>
                     </div>
 
@@ -127,7 +127,7 @@ export default function Transactions() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Cards/pink.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Cards/pink.svg`} alt="#" />
                       </div>
                     </div>
 
@@ -159,7 +159,7 @@ export default function Transactions() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Cards/yellow.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Cards/yellow.svg`} alt="#" />
                       </div>
                     </div>
 
@@ -223,7 +223,7 @@ export default function Transactions() {
                   <div className={styles.settingsItem}>
 
                     <div className={styles.iconBox}>
-                      <img src="/img/Cards/yellow.svg" alt="#" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Cards/yellow.svg`} alt="#" />
                     </div>
 
                     <div className={styles.textBox}>
@@ -236,7 +236,7 @@ export default function Transactions() {
                   <div className={styles.settingsItem}>
 
                     <div className={styles.iconBox}>
-                      <img src="/img/Cards/lock.svg" alt="#" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Cards/yellow.svg`} alt="#" />
                     </div>
 
                     <div className={styles.textBox}>
@@ -249,7 +249,7 @@ export default function Transactions() {
                    <div className={styles.settingsItem}>
 
                     <div className={styles.iconBox}>
-                      <img src="/img/Cards/google.svg" alt="#" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Cards/lock.svg`} alt="#" />
                     </div>
 
                     <div className={styles.textBox}>
@@ -262,7 +262,7 @@ export default function Transactions() {
                    <div className={styles.settingsItem}>
 
                     <div className={styles.iconBox}>
-                      <img src="/img/Transactions/apple.svg" alt="#" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Cards/google.svg`} alt="#" />
                     </div>
 
                     <div className={styles.textBox}>
@@ -275,7 +275,7 @@ export default function Transactions() {
                   <div className={styles.settingsItem}>
 
                     <div className={styles.iconBox}>
-                      <img src="/img/Transactions/apple.svg" alt="#" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Transactions/apple.svg`} alt="#" />
                     </div>
 
                     <div className={styles.textBox}>

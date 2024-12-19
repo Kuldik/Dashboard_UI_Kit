@@ -59,7 +59,7 @@ const Loans: React.FC = () => {
             <div className={styles.balanceItems}>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Loans/person.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Loans/person.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Personal Loans</p>
@@ -68,7 +68,7 @@ const Loans: React.FC = () => {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Loans/corp.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Loans/corp.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Corporate Loans</p>
@@ -77,7 +77,7 @@ const Loans: React.FC = () => {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Loans/business.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Loans/business.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Business Loans</p>
@@ -86,7 +86,7 @@ const Loans: React.FC = () => {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Loans/custom.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Loans/custom.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Custom Loans</p>

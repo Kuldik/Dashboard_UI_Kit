@@ -71,7 +71,7 @@ export default function Card({
             <p>Balance</p>
             <div className={styles.balance}>{balance}</div>
           </div>
-          <img src="/img/Cards/chipCard.svg" alt="chip" />
+          <img src={`${process.env.PUBLIC_URL}/img/Cards/chipCard.svg`} alt="chip" />
         </div>
         <div className={styles.clientInfo}>
           <div className={styles.nameBox}>
@@ -91,7 +91,7 @@ export default function Card({
           } as React.CSSProperties}
         >
           <div className={styles.cardNumber}>{cardNumber}</div>
-          <img src="/img/Cards/visa.svg" alt="visa" />
+          <img src={`${process.env.PUBLIC_URL}/img/Cards/visa.svg`} alt="visa" />
         </div>
       </div>
       {isModalOpen && (

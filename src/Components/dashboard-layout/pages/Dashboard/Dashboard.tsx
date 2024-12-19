@@ -22,12 +22,12 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Overview() {
 
   const workersList = useMemo(() => [
-    { name: "Livia Bator", position: "CEO", icon: "/img/Transfer/firstItem.png" },
-    { name: "Randy Press", position: "Director", icon: "/img/Transfer/secondItem.png" },
-    { name: "Workman", position: "Designer", icon: "/img/Transfer/thirdItem.png" },
-    { name: "Livia Bator", position: "CEO", icon: "/img/Transfer/firstItem.png" },
-    { name: "Randy Press", position: "Director", icon: "/img/Transfer/secondItem.png" },
-    { name: "Workman", position: "Designer", icon: "/img/Transfer/thirdItem.png" },
+    { name: "Livia Bator", position: "CEO", icon: `${process.env.PUBLIC_URL}/img/Transfer/firstItem.png` },
+    { name: "Randy Press", position: "Director", icon: `${process.env.PUBLIC_URL}/img/Transfer/secondItem.png` },
+    { name: "Workman", position: "Designer", icon: `${process.env.PUBLIC_URL}/img/Transfer/thirdItem.png` },
+    { name: "Livia Bator", position: "CEO", icon: `${process.env.PUBLIC_URL}/img/Transfer/firstItem.png` },
+    { name: "Randy Press", position: "Director", icon: `${process.env.PUBLIC_URL}/img/Transfer/secondItem.png` },
+    { name: "Workman", position: "Designer", icon: `${process.env.PUBLIC_URL}/img/Transfer/thirdItem.png` },
   ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -143,7 +143,7 @@ export default function Overview() {
               <div className={styles.transactionsBox}>
                 <div className={styles.transactionsItem}>
                   <TransactionItem
-                    icon="/img/Transactions/card.svg"
+                    icon={`${process.env.PUBLIC_URL}/img/Transactions/card.svg`}
                     title="Deposit from my Card"
                     date="28 January 2021"
                     amount="-$850"
@@ -152,7 +152,7 @@ export default function Overview() {
                 </div>
                 <div className={styles.transactionsItem}>
                  <TransactionItem
-                  icon="/img/Transactions/PayPal.svg"
+                  icon={`${process.env.PUBLIC_URL}/img/Transactions/PayPal.svg`}
                   title="Deposit Paypal"
                   date="25 January 2021"
                   amount="+$2,500"
@@ -161,7 +161,7 @@ export default function Overview() {
                 </div>
                 <div className={styles.transactionsItem}>
                  <TransactionItem
-                  icon="/img/Transactions/dollar.svg"
+                  icon={`${process.env.PUBLIC_URL}/img/Transactions/dollar.svg`}
                   title="Jemi Wilson"
                   date="21 January 2021"
                   amount="+$5,400"
@@ -208,7 +208,7 @@ export default function Overview() {
                     />
                   ))}
                   <button className={styles.transeferArrow} onClick={handleNextClick}>
-                    <img src="/img/Transfer/arrowNext.svg" alt="arrow" />
+                    <img src={`${process.env.PUBLIC_URL}/img/Transfer/arrowNext.svg`} alt="arrow" />
                   </button>
                 </div>
                   <div className={styles.sendForm}>
@@ -217,7 +217,7 @@ export default function Overview() {
                       <input type='number' placeholder="0.00" />
                       <button>
                         <b>Send</b>
-                        <img src="/img/Transactions/telegram.svg" alt="tg" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Transactions/telegram.svg`} alt="tg" />
                       </button>
                     </div>
                   </div>

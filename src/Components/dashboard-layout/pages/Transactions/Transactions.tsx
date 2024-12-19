@@ -150,10 +150,10 @@ export default function Transactions() {
               {filteredTransactions.map((transaction, index) => (
                 <tr key={transaction.id}>
                   <td className={styles.transactionsCellItem}>
-                    <img 
-                      src={`/img/Transactions/${index % 2 === 0 ? 'tableArrow.svg' : 'tableArrowDown.svg'}`} 
-                      alt="arrow" 
-                    />
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/img/Transactions/${index % 2 === 0 ? 'tableArrow.svg' : 'tableArrowDown.svg'}`} 
+                    alt="arrow" 
+                  />
                     {transaction.description}
                   </td>
                   <td className={styles.transactionsCellItem}>{transaction.id}</td>

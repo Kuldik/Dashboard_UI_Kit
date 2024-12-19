@@ -3,15 +3,15 @@ import styles from "./Sidebar.module.css";
 import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
-  { path: '/', name: 'Dashboard', icon: '/img/SidebarIcons/dashboard.svg' },
-  { path: '/transactions', name: 'Transactions', icon: '/img/SidebarIcons/transactions.svg' },
-  { path: '/accounts', name: 'Accounts', icon: '/img/SidebarIcons/accounts.svg' },
-  { path: '/investments', name: 'Investments', icon: '/img/SidebarIcons/investments.svg' },
-  { path: '/credit-cards', name: 'Credit Cards', icon: '/img/SidebarIcons/creditCards.svg' },
-  { path: '/loans', name: 'Loans', icon: '/img/SidebarIcons/loans.svg' },
-  { path: '/services', name: 'Services', icon: '/img/SidebarIcons/Services.svg' },
-  { path: '/my-privileges', name: 'My Privileges', icon: '/img/SidebarIcons/MyPrivilege.svg' },
-  { path: '/settings', name: 'Settings', icon: '/img/SidebarIcons/settings.svg' },
+  { path: '/', name: 'Dashboard', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/dashboard.svg` },
+  { path: '/transactions', name: 'Transactions', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/transactions.svg` },
+  { path: '/accounts', name: 'Accounts', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/accounts.svg` },
+  { path: '/investments', name: 'Investments', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/investments.svg` },
+  { path: '/credit-cards', name: 'Credit Cards', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/creditCards.svg` },
+  { path: '/loans', name: 'Loans', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/loans.svg` },
+  { path: '/services', name: 'Services', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/Services.svg` },
+  { path: '/my-privileges', name: 'My Privileges', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/MyPrivilege.svg` },
+  { path: '/settings', name: 'Settings', icon: `${process.env.PUBLIC_URL}/img/SidebarIcons/settings.svg` },
 ];
 
 export function Sidebar() {
@@ -36,7 +36,7 @@ export function Sidebar() {
     <div className={styles.wrapper}>
       <div className={styles.main}>
         <div className={styles.logoBox}>
-          <img src="/img/SidebarIcons/logoCard.svg" alt="logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/SidebarIcons/logoCard.svg`} alt="logo" />
           <h1 className={styles.logoText}>BankDash.</h1>
         </div>
         <button className={styles.burgerMenuBtn} onClick={handleMenuToggle}>

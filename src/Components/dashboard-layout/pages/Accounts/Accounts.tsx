@@ -36,7 +36,7 @@ export default function Transactions() {
             <div className={styles.balanceItems}>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/myBalance.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/myBalance.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>My Balance</p>
@@ -45,7 +45,7 @@ export default function Transactions() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/income.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/income.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Income</p>
@@ -54,7 +54,7 @@ export default function Transactions() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/expense.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/expense.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Expense</p>
@@ -63,7 +63,7 @@ export default function Transactions() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/total.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/total.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Total Saving</p>
@@ -82,7 +82,7 @@ export default function Transactions() {
                 <div className={styles.transactionsItem}>
 
                   <div className={styles.iconBox}>
-                    <img src="/img/Transactions/bell.svg" alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/img/Transactions/bell.svg`} alt="" />
                   </div>
 
                   <div className={styles.textBox}>
@@ -109,7 +109,7 @@ export default function Transactions() {
                 <div className={styles.transactionsItem}>
 
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/service.svg" alt="" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/service.svg`} alt="" />
                 </div>
 
                 <div className={styles.textBox}>
@@ -137,7 +137,7 @@ export default function Transactions() {
                 <div className={styles.transactionsItem}>
 
                 <div className={styles.iconBox}>
-                  <img src="/img/Transactions/profile.svg" alt="" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Transactions/profile.svg`} alt="" />
                 </div>
 
                 <div className={styles.textBox}>
@@ -199,7 +199,7 @@ export default function Transactions() {
                     <div className={styles.invoiceInfoBox}>
 
                       <div className={styles.iconBox}>
-                        <img src="/img/Transactions/apple.svg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Transactions/apple.svg`} alt="" />
                       </div>
                       
                       <div className={styles.textBox}>
@@ -217,7 +217,7 @@ export default function Transactions() {
                     <div className={styles.invoiceInfoBox}>
 
                       <div className={styles.iconBox}>
-                        <img src="/img/Transactions/mike.svg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Transactions/mike.svg`} alt="" />
                       </div>
                       
                       <div className={styles.textBox}>
@@ -235,7 +235,7 @@ export default function Transactions() {
                     <div className={styles.invoiceInfoBox}>
 
                       <div className={styles.iconBox}>
-                        <img src="/img/Transactions/ps.svg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Transactions/ps.svg`} alt="" />
                       </div>
                       
                       <div className={styles.textBox}>
@@ -253,7 +253,7 @@ export default function Transactions() {
                     <div className={styles.invoiceInfoBox}>
 
                       <div className={styles.iconBox}>
-                        <img src="/img/Transactions/profile.svg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Transactions/profile.svg`} alt="" />
                       </div>
                       
                       <div className={styles.textBox}>

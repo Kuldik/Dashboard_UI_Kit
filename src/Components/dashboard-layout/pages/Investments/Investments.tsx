@@ -21,7 +21,7 @@ export default function Investments() {
             <div className={styles.balanceItems}>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Investments/amount.svg" alt="#" />
+                 <img src={`${process.env.PUBLIC_URL}/img/Investments/amount.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Total Invested Amount</p>
@@ -30,7 +30,7 @@ export default function Investments() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Investments/number.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Investments/number.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Number of Investments</p>
@@ -39,7 +39,7 @@ export default function Investments() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Investments/return.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Investments/return.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Return Value</p>
@@ -77,7 +77,7 @@ export default function Investments() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Investments/apple.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Investments/apple.svg`} alt="#" />
                       </div>
                       <div className={styles.text}>
                         <p className={styles.title}>Apple Store</p>
@@ -99,7 +99,7 @@ export default function Investments() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Investments/google.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Investments/google.svg`} alt="#" />
                       </div>
                       <div className={styles.text}>
                         <p className={styles.title}>Samsung Mobile</p>
@@ -122,7 +122,7 @@ export default function Investments() {
 
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Investments/tesla.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Investments/tesla.svg`} alt="#" />
                       </div>
                       <div className={styles.text}>
                         <p className={styles.title}>Tesla Motors</p>

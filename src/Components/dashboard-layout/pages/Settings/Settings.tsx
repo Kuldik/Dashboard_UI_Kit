@@ -48,9 +48,9 @@ export default function Setting() {
                 <div className={styles.editProfileContainer}>
 
                   <div className={styles.imageBox}>
-                    <img src="/img/HeaderIcons/profile.jpg" alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/img/HeaderIcons/profile.jpg`} alt="#" />
                     <button className={styles.imageLabel}>
-                      <img src="/img/Setting/label.svg" alt="" />
+                      <img src={`${process.env.PUBLIC_URL}/img/Setting/label.svg`} alt="#" />
                     </button>
                   </div>
 

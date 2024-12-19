@@ -15,7 +15,7 @@ export default function Services() {
             <div className={styles.balanceItems}>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Services/lifeIns.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Services/lifeIns.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Life Insurance</p>
@@ -24,7 +24,7 @@ export default function Services() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Services/shopping.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Services/shopping.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Shopping</p>
@@ -33,7 +33,7 @@ export default function Services() {
               </div>
               <div className={styles.balanceItem}>
                 <div className={styles.iconBox}>
-                  <img src="/img/Services/safety.svg" alt="#" />
+                  <img src={`${process.env.PUBLIC_URL}/img/Services/safety.svg`} alt="#" />
                 </div>
                 <div className={styles.itemsBox}>
                   <p className={styles.text}>Safety</p>
@@ -53,7 +53,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/business.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/business.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
@@ -90,7 +90,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/accounts.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/accounts.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
@@ -127,7 +127,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/savings.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/savings.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
@@ -165,7 +165,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/debit.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/debit.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
@@ -203,7 +203,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/listLifeIns.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/listLifeIns.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
@@ -241,7 +241,7 @@ export default function Services() {
                   <div className={styles.investmentsItem}>
                     <div className={styles.info}>
                       <div className={styles.icon}>
-                        <img src="/img/Services/business.svg" alt="#" />
+                        <img src={`${process.env.PUBLIC_URL}/img/Services/business.svg`} alt="#" />
                       </div>
 
                       <div className={styles.text}>
