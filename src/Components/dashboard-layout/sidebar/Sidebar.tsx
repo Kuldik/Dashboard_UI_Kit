@@ -23,13 +23,7 @@ export function Sidebar() {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
     const menu = document.querySelector(`.${styles.menu}`);
-    if (menu) {
-      if (isMenuOpen) {
-        menu.classList.remove(styles.menuOpen);
-      } else {
-        menu.classList.add(styles.menuOpen);
-      }
-    }
+    menu?.classList.toggle(styles.menuOpen);
   };
 
   return (

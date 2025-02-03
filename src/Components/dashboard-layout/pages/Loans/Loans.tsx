@@ -27,6 +27,7 @@ const Loans: React.FC = () => {
   const { register, handleSubmit } = useForm();
   
   const handleRepay = (index: number) => {
+    console.log('handleRepay called');
     setData(data.filter((item, i) => i !== index));
     toast.success('Loan Repayed!');
   };
